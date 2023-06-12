@@ -9,8 +9,6 @@ on:
 jobs:
   release-container:
     uses: radiorabe/actions/.github/workflows/release-container.yaml@v0.13.1
-    needs:
-      - python-poetry
     with:
       image: 'ghcr.io/radiorabe/backstage'
       name: 'backstage'

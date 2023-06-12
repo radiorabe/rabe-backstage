@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: rabe-backstage
+  title: RaBe Backstage
+  description: |
+    All-in-one Backstage app for RaBe.
+   annotations:
+     github.com/project-slug: radiorabe/rabe-backstage
+     backstage.io/techdocs-ref: dir:.
+spec:
+  type: website
+  owner: it-reaktion
+  lifecycle: experimental

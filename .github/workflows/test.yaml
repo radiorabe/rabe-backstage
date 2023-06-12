@@ -1,0 +1,8 @@
+name: Test
+
+on:
+  pull_request:
+
+jobs:
+  pre-commit:
+    uses: radiorabe/actions/.github/workflows/test-pre-commit.yaml@v0.13.1

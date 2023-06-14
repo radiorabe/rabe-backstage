@@ -88,6 +88,7 @@ RUN    microdnf -y module disable nodejs \
          mkdocs-section-index \
          mkdocs-autorefs \
          'mkdocstrings[python]' \
+         mkdocs-techdocs-core \
     && microdnf clean all \
     && useradd -u 1001 -r -g 0 -s /sbin/nologin \
          -c "Default Application User" default \

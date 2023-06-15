@@ -4,3 +4,4 @@ node_modules
 packages/*/node_modules
 plugins
 *.local.yaml
+vuln.json

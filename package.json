@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@backstage/cli": "^0.22.7",
-    "@spotify/prettier-config": "^14.1.5",
+    "@spotify/prettier-config": "^15.0.0",
     "concurrently": "^7.6.0",
     "lerna": "^6.5.0",
     "node-gyp": "^9.0.0",

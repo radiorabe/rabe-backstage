@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import { Content, Header, Page } from '@backstage/core-components';
 import LocalLibrary from '@material-ui/icons/LocalLibrary';
+import Assignment from '@material-ui/icons/Assignment';
 import {
   HomePageToolkit,
   HomePageRandomJoke,
@@ -32,6 +33,11 @@ const toolkitTools = [
     url: 'https://wiki.rabe.ch',
     label: 'RaBe Wiki',
     icon: <LocalLibrary />,
+  },
+  {
+    url: 'https://board.rabe.ch',
+    label: 'Kanboard',
+    icon: <Assignment />,
   }
 ]
 

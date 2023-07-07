@@ -8,7 +8,15 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      backstage:
+        patterns:
+          - "@backstage/*"
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      baseimages:
+        patterns:
+          - "*"

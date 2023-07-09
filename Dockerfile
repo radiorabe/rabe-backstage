@@ -105,8 +105,10 @@ USER 1001
 COPY --from=build /opt/app-root/src/yarn.lock /opt/app-root/src/package.json /opt/app-root/src/packages/backend/dist/skeleton.tar.gz ./
 RUN tar xzf skeleton.tar.gz && rm skeleton.tar.gz
 
-# Install production dependencies
-RUN yarn install --frozen-lockfile --production --network-timeout 600000 && yarn cache clean
+# Install production dependencies, ignoring scripts so we don't need a node-gyp toolchain to rebuild isolated-vm
+RUN yarn install --frozen-lockfile --production --network-timeout 600000 --ignore-scripts && yarn cache clean
+# Copy isolated-vm from build stage where we didn't ignore scripts
+COPY --from=build --chown=1001:0 /opt/app-root/src/node_modules/isolated-vm ./node_modules/isolated-vm
 
 # Copy the built packages from the build stage
 COPY --from=build /opt/app-root/src/packages/backend/dist/bundle.tar.gz .

@@ -2,10 +2,10 @@
 FROM registry.access.redhat.com/ubi9/nodejs-18:latest AS deps
 USER 0
 
-# Install yarn
+# Install yarn and libs for building isolated-vm with node-gyp
 RUN \
     curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | tee /etc/yum.repos.d/yarn.repo && \
-    dnf install -y yarn
+    dnf install -y brotli-devel yarn zlib-devel
 
 COPY ./package.json ./yarn.lock ./
 COPY ./packages ./packages

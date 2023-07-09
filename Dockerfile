@@ -108,12 +108,10 @@ RUN tar xzf skeleton.tar.gz && rm skeleton.tar.gz
 # Install production dependencies, ignoring scripts so we don't need a node-gyp toolchain to rebuild binary modules
 RUN yarn install --frozen-lockfile --production --network-timeout 600000 --ignore-scripts && yarn cache clean
 # Copy binary modules from build stage where we didn't ignore scripts
-COPY --from=build --chown=1001:0 \
-     /opt/app-root/src/node_modules/isolated-vm \
-     /opt/app-root/src/node_modules/ssh2 \
-     /opt/app-root/src/node_modules/better-sqlite3 \
-     /opt/app-root/src/node_modules/cpu-features \
-     ./node_modules/
+COPY --from=build --chown=1001:0 /opt/app-root/src/node_modules/isolated-vm    ./node_modules/isolated-vm
+COPY --from=build --chown=1001:0 /opt/app-root/src/node_modules/ssh2           ./node_modules/ssh2
+COPY --from=build --chown=1001:0 /opt/app-root/src/node_modules/better-sqlite3 ./node_modules/better-sqlite3
+COPY --from=build --chown=1001:0 /opt/app-root/src/node_modules/cpu-features   ./node_modules/cpu-features
 
 # Copy the built packages from the build stage
 COPY --from=build /opt/app-root/src/packages/backend/dist/bundle.tar.gz .

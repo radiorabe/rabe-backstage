@@ -5,4 +5,4 @@ on:
 
 jobs:
   pre-commit:
-    uses: radiorabe/actions/.github/workflows/test-pre-commit.yaml@v0.14.0
+    uses: radiorabe/actions/.github/workflows/test-pre-commit.yaml@v0.15.0

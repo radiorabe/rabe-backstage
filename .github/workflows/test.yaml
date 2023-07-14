@@ -33,3 +33,8 @@ jobs:
     - run: yarn install
     - run: yarn test
     - run: yarn --cwd packages/app/ test:e2e:ci
+    - uses: actions/upload-artifact@v3
+      with:
+        name: cypress-videos
+        path: packages/app/cypress/videos/
+        retention-days: 7

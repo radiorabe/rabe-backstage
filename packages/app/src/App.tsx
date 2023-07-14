@@ -63,7 +63,6 @@ const app = createApp({
     SignInPage: props => (
       <SignInPage
         {...props}
-        auto
         provider={{
           id: 'keycloak-auth-provider',
           title: 'Keycloak',

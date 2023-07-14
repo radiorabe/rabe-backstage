@@ -53,6 +53,8 @@ site
 # Python
 venv/
 
+# Cypress
+packages/app/cypress/videos/
+
 # Trivy
-trivy-results.sarif
-vuln.json
+trivy.*

@@ -12,6 +12,12 @@ updates:
       backstage:
         patterns:
           - "@backstage/*"
+          - "@roadiehq/*"
+          - "@janus-idp/*"
+      react:
+        patterns:
+          - "@types/react*"
+          - "react*"
   - package-ecosystem: "docker"
     directory: "/"
     schedule:

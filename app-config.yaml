@@ -49,7 +49,7 @@ integrations:
 
 proxy:
   ### Allow calling github api from scaffolder-backend-module-http-request
-  'api.github.com':
+  '/api.github.com':
     target: 'https://api.github.com'
 
 # Reference documentation http://backstage.io/docs/features/techdocs/configuration

@@ -68,9 +68,7 @@ export const Root = ({ children }: PropsWithChildren<{}>) => (
       <SidebarDivider />
       <SidebarGroup label="Menu" icon={<MenuIcon />}>
         <SidebarItem icon={CatalogIcon} to="catalog" text="Catalog" />
-        <FeatureFlagged with="development">
-          <SidebarItem icon={ExtensionIcon} to="api-docs" text="APIs" />
-        </FeatureFlagged>
+        <SidebarItem icon={ExtensionIcon} to="api-docs" text="APIs" />
         <SidebarItem icon={LibraryBooks} to="docs" text="Docs" />
         <FeatureFlagged with="development">
           <SidebarItem icon={CreateComponentIcon} to="create" text="Create..." />

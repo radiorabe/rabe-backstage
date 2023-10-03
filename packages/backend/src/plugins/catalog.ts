@@ -1,6 +1,6 @@
 import { CatalogBuilder } from '@backstage/plugin-catalog-backend';
 import { ScaffolderEntitiesProcessor } from '@backstage/plugin-scaffolder-backend';
-import { UnprocessedEntitesModule } from '@backstage/plugin-catalog-backend-module-unprocessed';
+import { UnprocessedEntitiesModule } from '@backstage/plugin-catalog-backend-module-unprocessed';
 import { Router } from 'express';
 import { PluginEnvironment } from '../types';
 
@@ -19,7 +19,7 @@ export default async function createPlugin(
   );
   builder.addProcessor(new ScaffolderEntitiesProcessor());
   const { processingEngine, router } = await builder.build();
-  const unprocessed = new UnprocessedEntitesModule(
+  const unprocessed = new UnprocessedEntitiesModule(
     await env.database.getClient(),
     router,
   );

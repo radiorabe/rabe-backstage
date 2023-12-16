@@ -4,5 +4,4 @@ node_modules
 packages/*/node_modules
 plugins
 *.local.yaml
-trivy-results.sarif
-vuln.json
+trivy.*

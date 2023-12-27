@@ -346,11 +346,14 @@ const groupPage = (
         <Grid item xs={12} md={6}>
           <EntityOwnershipCard variant="gridItem" />
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} md={6}>
           <EntityMembersListCard />
         </Grid>
+        <Grid item xs={12} md={6}>
+          <EntityLinksCard />
+        </Grid>
         <FeatureFlagged with="development">
-          <Grid item xs={12}>
+          <Grid item xs={12} md={6}>
             <EntityTeamPullRequestsCard />
           </Grid>
         </FeatureFlagged>

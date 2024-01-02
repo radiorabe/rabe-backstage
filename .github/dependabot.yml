@@ -15,9 +15,11 @@ updates:
           - "@backstage/*"
           - "@roadiehq/*"
           - "@janus-idp/*"
-      react:
+      types-react:
         patterns:
           - "@types/react*"
+      react:
+        patterns:
           - "react*"
   - package-ecosystem: "docker"
     directory: "/"

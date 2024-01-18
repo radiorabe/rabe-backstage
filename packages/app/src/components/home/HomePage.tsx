@@ -46,8 +46,7 @@ export const homePage = (
     <Header title={<WelcomeTitle />} pageTitleOverride="Home" />
     <Content>
       <Grid container justifyContent="center" spacing={6}>
-        <Grid container item xs={12} justifyContent='center'>
-        </Grid>
+        <Grid container item xs={12} justifyContent='center' />
       </Grid>
       <CustomHomepageGrid config={defaultConfig}>
         <HomePageToolkit

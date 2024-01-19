@@ -12,3 +12,5 @@ spec:
   type: website
   owner: it-reaktion
   lifecycle: experimental
+  dependsOn:
+    - component:default/rabe-ubi9-minimal

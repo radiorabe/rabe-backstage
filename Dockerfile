@@ -1,22 +1,24 @@
 # Stage 1 - Install dependencies
-FROM registry.access.redhat.com/ubi9/nodejs-18:latest AS deps
+FROM registry.access.redhat.com/ubi9/nodejs-20:latest AS deps
 USER 0
 
 # Install yarn and libs for building isolated-vm with node-gyp
-RUN \
-    curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | tee /etc/yum.repos.d/yarn.repo && \
-    dnf install -y brotli-devel yarn zlib-devel
+RUN    curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | tee /etc/yum.repos.d/yarn.repo \
+    && dnf install -y brotli-devel yarn zlib-devel
 
 COPY ./package.json ./yarn.lock ./
 COPY ./packages ./packages
+COPY .yarnrc.yml ./
+COPY .yarn/ ./.yarn
 
 # Remove all files except package.json
 RUN find packages -mindepth 2 -maxdepth 2 \! -name "package.json" -exec rm -rf {} \+
 
-RUN yarn install --frozen-lockfile --network-timeout 600000
+RUN yarn install --immutable --network-timeout 600000
+RUN chown 1001:0 ".yarn/install-state.gz"
 
 # Stage 2 - Build packages
-FROM registry.access.redhat.com/ubi9/nodejs-18:latest AS build
+FROM registry.access.redhat.com/ubi9/nodejs-20:latest AS build
 USER 0
 
 # Install yarn
@@ -38,7 +40,7 @@ ENV APP_ROOT=/opt/app-root \
     HOME=/opt/app-root/src \
     NPM_RUN=start \
     PLATFORM="el9" \
-    NODEJS_VERSION=18 \
+    NODEJS_VERSION=20 \
     NPM_RUN=start \
     NAME=backstage
 
@@ -102,12 +104,13 @@ WORKDIR "$HOME"
 USER 1001
 
 # Copy the install dependencies from the build stage and context
-COPY --from=build /opt/app-root/src/yarn.lock /opt/app-root/src/package.json /opt/app-root/src/packages/backend/dist/skeleton.tar.gz ./
+COPY --from=build /opt/app-root/src/.yarn ./.yarn
+COPY --from=build /opt/app-root/src/yarn.lock /opt/app-root/src/package.json /opt/app-root/src/.yarnrc.yml /opt/app-root/src/packages/backend/dist/skeleton.tar.gz ./
 RUN tar xzf skeleton.tar.gz && rm skeleton.tar.gz
 
 # Install production dependencies, ignoring scripts so we don't need a node-gyp toolchain to rebuild binary modules
-RUN yarn install --frozen-lockfile --production --network-timeout 600000 --ignore-scripts && yarn cache clean
-# Copy binary modules from build stage where we didn't ignore scripts
+RUN YARN_ENABLE_SCRIPTS=false yarn workspaces focus --all --production && rm -rf "$(yarn cache clean)"
+# Copy binary modules from build stage where we have proper toolchains
 COPY --from=build --chown=1001:0 /opt/app-root/src/node_modules/isolated-vm    ./node_modules/isolated-vm
 COPY --from=build --chown=1001:0 /opt/app-root/src/node_modules/ssh2           ./node_modules/ssh2
 COPY --from=build --chown=1001:0 /opt/app-root/src/node_modules/better-sqlite3 ./node_modules/better-sqlite3

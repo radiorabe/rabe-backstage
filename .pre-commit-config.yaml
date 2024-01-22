@@ -3,7 +3,7 @@ repos:
     rev: v3.4.0
     hooks:
       - id: trailing-whitespace
-        exclude: ^src/api/client.js$
+        exclude: ^(src/api/client.js|.yarn/releases/.*)$
       - id: end-of-file-fixer
         exclude: ^src/api/client.js$
       - id: check-symlinks

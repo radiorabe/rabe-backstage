@@ -3648,8 +3648,8 @@ __metadata:
   linkType: hard
 
 "@backstage/plugin-catalog-backend@npm:^1.14.0, @backstage/plugin-catalog-backend@npm:^1.16.1":
-  version: 1.16.1
-  resolution: "@backstage/plugin-catalog-backend@npm:1.16.1"
+  version: 1.16.2
+  resolution: "@backstage/plugin-catalog-backend@npm:1.16.2"
   dependencies:
     "@backstage/backend-common": "npm:^0.20.1"
     "@backstage/backend-openapi-utils": "npm:^0.1.2"
@@ -3689,7 +3689,7 @@ __metadata:
     yaml: "npm:^2.0.0"
     yn: "npm:^4.0.0"
     zod: "npm:^3.22.4"
-  checksum: 2b6fd9103a24bccb27820199267fb4e066b87aa2c3290767a1b10ee59978fb210ed5309d5ca9bf0ae5c16ba16e25ddd5221d4a9df0d44f908f3a34eb8e213338
+  checksum: a0529d8ac6938dc71ea82ce8968a19b2cec666ac150fa01a3ca66689216241cad7cd0f9b4a97424bf842d77c31fb30bccc485a339d285ea60db0947b8831b21c
   languageName: node
   linkType: hard
 
@@ -6347,8 +6347,8 @@ __metadata:
   linkType: hard
 
 "@janus-idp/backstage-plugin-keycloak-backend@npm:^1.7.12":
-  version: 1.7.12
-  resolution: "@janus-idp/backstage-plugin-keycloak-backend@npm:1.7.12"
+  version: 1.7.13
+  resolution: "@janus-idp/backstage-plugin-keycloak-backend@npm:1.7.13"
   dependencies:
     "@backstage/backend-common": "npm:^0.19.8"
     "@backstage/backend-plugin-api": "npm:^0.6.6"
@@ -6361,7 +6361,7 @@ __metadata:
     lodash: "npm:^4.17.21"
     uuid: "npm:^9.0.1"
     winston: "npm:^3.11.0"
-  checksum: 13f2f56289e83475259cee965f21747fecac1cec0c62b039b896a7f44e0cce9b8f500907cb703e2b738a21eb1444b6e45283a9e3139f2f298325bf46a609c55e
+  checksum: bca752c321d9730f4ed3a809848efe8b333ab53c47bb8b94ae54325ce73a02a137c0c25f765169e6c34a46fc93daf1e11abce05c2aefab9b1b26f118f22b257f
   languageName: node
   linkType: hard
 

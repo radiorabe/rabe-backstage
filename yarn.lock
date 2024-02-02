@@ -28528,7 +28528,7 @@ __metadata:
     "@backstage/e2e-test-utils": "npm:^0.1.0"
     "@playwright/test": "npm:^1.32.3"
     "@spotify/prettier-config": "npm:^15.0.0"
-    "@types/react": "npm:^17"
+    "@types/react": "npm:^18"
     "@types/react-dom": "npm:^17"
     concurrently: "npm:^8.2.0"
     lerna: "npm:^8.0.2"

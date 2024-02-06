@@ -6393,8 +6393,8 @@ __metadata:
   linkType: hard
 
 "@janus-idp/backstage-plugin-keycloak-backend@npm:^1.7.13":
-  version: 1.8.0
-  resolution: "@janus-idp/backstage-plugin-keycloak-backend@npm:1.8.0"
+  version: 1.8.1
+  resolution: "@janus-idp/backstage-plugin-keycloak-backend@npm:1.8.1"
   dependencies:
     "@backstage/backend-common": "npm:^0.19.8"
     "@backstage/backend-plugin-api": "npm:^0.6.6"
@@ -6407,7 +6407,7 @@ __metadata:
     lodash: "npm:^4.17.21"
     uuid: "npm:^9.0.1"
     winston: "npm:^3.11.0"
-  checksum: 7ea12e52eb6c2d911ab049479650347f6c6c015fd2fb0831d34cb873c873017ae29045f25c48ead01590ccce192570cd306534d66c2bfb569fa4145ec47a1a10
+  checksum: 50ed63505e7aa2519a611837c44bdd9ce1f2630038921e52779f0643a40eaf4f9532f96a72e6c231951ae0a2f0331e968b4cd0d6741bf0e54eacab585cf90449
   languageName: node
   linkType: hard
 

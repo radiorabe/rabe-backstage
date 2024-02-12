@@ -9083,8 +9083,8 @@ __metadata:
   linkType: hard
 
 "@roadiehq/scaffolder-backend-module-http-request@npm:^4.1.1":
-  version: 4.1.2
-  resolution: "@roadiehq/scaffolder-backend-module-http-request@npm:4.1.2"
+  version: 4.1.3
+  resolution: "@roadiehq/scaffolder-backend-module-http-request@npm:4.1.3"
   dependencies:
     "@backstage/backend-common": "npm:^0.19.9"
     "@backstage/core-app-api": "npm:^1.11.1"
@@ -9092,7 +9092,7 @@ __metadata:
     "@backstage/plugin-scaffolder-backend": "npm:^1.19.1"
     cross-fetch: "npm:^3.1.4"
     winston: "npm:^3.2.1"
-  checksum: 32ec0a6ec5476729f5c93c2fa7c8c73fa2907693f31db2307a02dcd94bdaf2cae4aafd1f862714094e3f45c9de34aecf3e88fba3526a1853cc29c1eda6fd66e6
+  checksum: 834193c83f5c83047327ee151c7dc8301c739b4349baec9040b50fb05b173ad48a3606bf95a0ccd09c28f69479655ef11129811159229ea44af785a09d3a8bc5
   languageName: node
   linkType: hard
 

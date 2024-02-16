@@ -43,3 +43,17 @@ catalog:
   # See https://backstage.io/docs/features/software-catalog/software-catalog-overview#adding-components-to-the-catalog for more details
   # on how to get entities into the catalog.
   locations: []
+  providers:
+    keycloakOrg:
+      production:
+        baseUrl: ${CATALOG_KEYCLOAK_BASEURL}
+        loginRealm: ${CATALOG_KEYCLOAK_LOGINREALM}
+        realm: ${CATALOG_KEYCLOAK_REALM}
+        clientId: ${CATALOG_KEYCLOAK_CLIENT_ID}
+        clientSecret: ${CATALOG_KEYCLOAK_CLIENT_SECRET}
+        schedule:
+          # supports cron, ISO duration, "human duration" as used in code
+          frequency: { minutes: 30 }
+          # supports ISO duration, "human duration" as used in code
+          timeout: { minutes: 1 }
+          initialDelay: { seconds: 15 }

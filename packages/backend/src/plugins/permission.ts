@@ -16,7 +16,7 @@ import { Router } from "express-serve-static-core";
 import { PluginEnvironment } from "../types";
 
 
-const BACKSTAGE_ADMINS_GROUP = 'group:default/backstage-admins';
+const BACKSTAGE_ADMINS_GROUP = 'group:default/it-reaktion';
 
 class CustomPermissionPolicy implements PermissionPolicy {
     async handle(request: PolicyQuery, user?: BackstageIdentityResponse): Promise<PolicyDecision> {

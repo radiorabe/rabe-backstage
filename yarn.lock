@@ -9083,16 +9083,16 @@ __metadata:
   linkType: hard
 
 "@roadiehq/scaffolder-backend-module-http-request@npm:^4.1.1":
-  version: 4.1.2
-  resolution: "@roadiehq/scaffolder-backend-module-http-request@npm:4.1.2"
+  version: 4.1.4
+  resolution: "@roadiehq/scaffolder-backend-module-http-request@npm:4.1.4"
   dependencies:
     "@backstage/backend-common": "npm:^0.19.9"
     "@backstage/core-app-api": "npm:^1.11.1"
     "@backstage/core-plugin-api": "npm:^1.8.0"
     "@backstage/plugin-scaffolder-backend": "npm:^1.19.1"
-    cross-fetch: "npm:^3.1.4"
+    cross-fetch: "npm:^4.0.0"
     winston: "npm:^3.2.1"
-  checksum: 32ec0a6ec5476729f5c93c2fa7c8c73fa2907693f31db2307a02dcd94bdaf2cae4aafd1f862714094e3f45c9de34aecf3e88fba3526a1853cc29c1eda6fd66e6
+  checksum: 55434caf553652469d7287a34075c3f9a418b9cf775f94d69890aaa8fc858e2c5c3face5b498e42fd40c714828b427f4a0ee52ea97fd4d7322742b2e3a215d73
   languageName: node
   linkType: hard
 
@@ -15523,7 +15523,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-fetch@npm:^3.1.4, cross-fetch@npm:^3.1.5":
+"cross-fetch@npm:^3.1.5":
   version: 3.1.8
   resolution: "cross-fetch@npm:3.1.8"
   dependencies:

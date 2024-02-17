@@ -31,12 +31,7 @@ backend:
     store: memory
 
 auth:
-  # see https://backstage.io/docs/auth/ to learn about auth providers
   environment: production
-  providers:
-    keycloak:
-      production:
-        metadataUrl: https://sso.rabe.ch/auth/realms/rabe/.well-known/openid-configuration
 
 catalog:
   # Overrides the default list locations from app-config.yaml as these contain example data.

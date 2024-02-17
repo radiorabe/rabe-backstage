@@ -72,6 +72,7 @@ auth:
   providers:
     keycloak:
       production:
+        prompt: auto
         metadataUrl: ${AUTH_KEYCLOAK_METADATA_URL}
         clientId: ${AUTH_KEYCLOAK_CLIENT_ID}
         clientSecret: ${AUTH_KEYCLOAK_CLIENT_SECRET}

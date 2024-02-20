@@ -92,7 +92,7 @@ catalog:
     entityFilename: catalog-info.yaml
     pullRequestBranchName: backstage-integration
   rules:
-    - allow: [Component, System, API, Resource, Location, Template]
+    - allow: [API, Component, Domain, Resource, System, Template, Location]
   providers:
     github:
       github:

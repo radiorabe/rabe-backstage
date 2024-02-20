@@ -1,3 +1,16 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: rabe-backsage
+  title: RaBe Backstage
+  description: Our overengineered developer portal
+  annotations:
+    github.com/project-slug: radiorabe/rabe-backstage
+    backstage.io/techdocs-ref: dir:.
+spec:
+  owner: it-reaktion
+---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -12,5 +25,6 @@ spec:
   type: website
   owner: it-reaktion
   lifecycle: experimental
+  system: rabe-backstage
   dependsOn:
     - component:default/rabe-ubi9-minimal

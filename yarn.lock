@@ -2672,8 +2672,8 @@ __metadata:
   linkType: hard
 
 "@backstage/backend-common@npm:^0.19.8, @backstage/backend-common@npm:^0.19.9":
-  version: 0.19.9
-  resolution: "@backstage/backend-common@npm:0.19.9"
+  version: 0.19.10
+  resolution: "@backstage/backend-common@npm:0.19.10"
   dependencies:
     "@aws-sdk/abort-controller": "npm:^3.347.0"
     "@aws-sdk/client-s3": "npm:^3.350.0"
@@ -2735,13 +2735,13 @@ __metadata:
   peerDependenciesMeta:
     pg-connection-string:
       optional: true
-  checksum: 543f43b3875a2f4e747929bba1ff0af6456aad56dbaea97b480de5d5d27ea93fb9469bcfc2c091fb06fb0b4f40a7d153329f79ef6f03968f0f9d31ed9021fb8d
+  checksum: 3ca1266806138689a0b5c654a1cf0585f80ccef24038c37d6bb319cc430d9014269d13c6789b3d675309366c770f44e5909bd66e2a1a62c03b7c20284585e61a
   languageName: node
   linkType: hard
 
 "@backstage/backend-common@npm:^0.20.1":
-  version: 0.20.1
-  resolution: "@backstage/backend-common@npm:0.20.1"
+  version: 0.20.2
+  resolution: "@backstage/backend-common@npm:0.20.2"
   dependencies:
     "@aws-sdk/abort-controller": "npm:^3.347.0"
     "@aws-sdk/client-s3": "npm:^3.350.0"
@@ -2803,7 +2803,7 @@ __metadata:
   peerDependenciesMeta:
     pg-connection-string:
       optional: true
-  checksum: bf159e56c46d9cf16df9947ec29718a1f173cfcce17dfd684081db7c94ff9bac0ae05c96674d58b58a06aa51b12a1dd9f2ee88e84f7e00337f033e5e87a8caf7
+  checksum: 91efb14e2f09d8bd1f489c0d3815ff7ade7fbeb7a2494770bce68b1da9b867b512a3543c887b0d26432639a66f901810e9ce59232df0cc70fa52e852cef0f807
   languageName: node
   linkType: hard
 

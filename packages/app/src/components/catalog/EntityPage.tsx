@@ -58,7 +58,7 @@ import {
 
 import { TechDocsAddons } from '@backstage/plugin-techdocs-react';
 import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
-import { EntityTeamPullRequestsCard } from '@backstage/plugin-github-pull-requests-board';
+import { EntityTeamPullRequestsContent } from '@backstage/plugin-github-pull-requests-board';
 import { EntityGithubInsightsContent } from '@roadiehq/backstage-plugin-github-insights';
 import { EntityTechInsightsScorecardContent } from '@backstage/plugin-tech-insights';
 
@@ -352,12 +352,10 @@ const groupPage = (
         <Grid item xs={12} md={6}>
           <EntityLinksCard />
         </Grid>
-        <FeatureFlagged with="development">
-          <Grid item xs={12} md={6}>
-            <EntityTeamPullRequestsCard />
-          </Grid>
-        </FeatureFlagged>
       </Grid>
+    </EntityLayout.Route>
+    <EntityLayout.Route path="/pull-requests" title="Pull Requests">
+      <EntityTeamPullRequestsContent />
     </EntityLayout.Route>
   </EntityLayout>
 );

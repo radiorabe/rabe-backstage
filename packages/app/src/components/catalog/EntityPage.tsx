@@ -60,7 +60,7 @@ import { TechDocsAddons } from '@backstage/plugin-techdocs-react';
 import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
 import { EntityTeamPullRequestsContent } from '@backstage/plugin-github-pull-requests-board';
 import { EntityGithubInsightsContent } from '@roadiehq/backstage-plugin-github-insights';
-import { EntityTechInsightsScorecardContent } from '@backstage/plugin-tech-insights';
+import { EntityTodoContent } from '@backstage/plugin-todo';
 
 const techdocsContent = (
   <EntityTechdocsContent>
@@ -145,15 +145,6 @@ const overviewContent = (
   </Grid>
 );
 
-const techinsightsRoute = (
-  <EntityLayout.Route path="/tech-insights" title="Scorecards">
-    <EntityTechInsightsScorecardContent
-      title="Tech Insights Scorecard"
-      description="The Tech Insights Scorecard contains an overview of the status of Backstage integration of this component."
-    />
-  </EntityLayout.Route>
-)
-
 const serviceEntityPage = (
   <EntityLayout>
     <EntityLayout.Route path="/" title="Overview">
@@ -202,9 +193,10 @@ const serviceEntityPage = (
       <EntityLayout.Route path="/github-actions" title="GitHub Actions">
         <EntityGithubActionsContent />
       </EntityLayout.Route>
+      <EntityLayout.Route path="/todo" title="Todo">
+        <EntityTodoContent />
+      </EntityLayout.Route>
     </FeatureFlagged>
-
-    {techinsightsRoute}
   </EntityLayout>
 );
 
@@ -265,8 +257,6 @@ const defaultEntityPage = (
         <EntityGithubActionsContent />
       </EntityLayout.Route>
     </FeatureFlagged>
-
-    {techinsightsRoute}
   </EntityLayout >
 );
 

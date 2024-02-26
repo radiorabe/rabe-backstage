@@ -20,27 +20,18 @@ export default async function createPlugin(
       ...defaultAuthProviderFactories,
       keycloak: providers.oidc.create({
         signIn: {
-          /*
-          resolver(_, ctx) {
-            const userRef = 'user:default/guest'; // Must be a full entity reference
-            return ctx.issueToken({
-              claims: {
-                sub: userRef, // The user's own identity
-                ent: [userRef], // A list of identities that the user claims ownership through
-              },
-            });
-          },
-          */
           resolver(info, ctx) {
             const userRef = stringifyEntityRef({
               kind: 'User',
               name: info.result.userinfo.preferred_username || info.result.userinfo.sub,
               namespace: DEFAULT_NAMESPACE,
             });
+            const groups: string[] = info?.result.userinfo.groups as string[]
             return ctx.issueToken({
               claims: {
                 sub: userRef, // The user's own identity
-                ent: [userRef], // A list of identities that the user claims ownership through
+                // A list of identities that the user claims ownership through
+                ent: [userRef, ...groups.map((x: string) => `group:default/${x}`) ],
               },
             });
           },

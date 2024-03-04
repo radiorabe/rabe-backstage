@@ -5,7 +5,10 @@ import {
 } from '@backstage/plugin-auth-backend';
 import { Router } from 'express';
 import { PluginEnvironment } from '../types';
-import { DEFAULT_NAMESPACE, stringifyEntityRef } from '@backstage/catalog-model';
+import {
+  DEFAULT_NAMESPACE,
+  stringifyEntityRef,
+} from '@backstage/catalog-model';
 
 export default async function createPlugin(
   env: PluginEnvironment,
@@ -23,15 +26,26 @@ export default async function createPlugin(
           resolver(info, ctx) {
             const userRef = stringifyEntityRef({
               kind: 'User',
-              name: info.result.userinfo.preferred_username || info.result.userinfo.sub,
+              name:
+                info.result.userinfo.preferred_username ||
+                info.result.userinfo.sub,
               namespace: DEFAULT_NAMESPACE,
             });
-            const groups: string[] = info?.result.userinfo.groups as string[]
+            const groups: string[] = info?.result.userinfo.groups as string[];
             return ctx.issueToken({
               claims: {
                 sub: userRef, // The user's own identity
                 // A list of identities that the user claims ownership through
-                ent: [userRef, ...groups.map((x: string) => `group:default/${x}`) ],
+                ent: [
+                  userRef,
+                  ...groups.map((x: string) =>
+                    stringifyEntityRef({
+                      kind: 'Group',
+                      name: x,
+                      namespace: DEFAULT_NAMESPACE,
+                    }),
+                  ),
+                ],
               },
             });
           },

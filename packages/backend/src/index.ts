@@ -1,32 +1,38 @@
 import { createBackend } from '@backstage/backend-defaults';
-import { legacyPlugin } from '@backstage/backend-common';
 
 const backend = createBackend();
 
-backend.add(import('@backstage/plugin-app-backend/alpha'));
-backend.add(import('@backstage/plugin-proxy-backend/alpha'))
-backend.add(import('@backstage/plugin-techdocs-backend/alpha'));
-backend.add(import('@backstage/plugin-scaffolder-backend/alpha'));
+backend.add(import('@backstage/plugin-app-backend'));
+backend.add(import('@backstage/plugin-proxy-backend'))
+backend.add(import('@backstage/plugin-techdocs-backend'));
+backend.add(import('@backstage/plugin-scaffolder-backend'));
+backend.add(import('@backstage/plugin-scaffolder-backend-module-github'));
 backend.add(
   import('@roadiehq/scaffolder-backend-module-http-request/new-backend'),
 );
 
 // auth plugin
-// TODO: switch to new backend together with perms when ready
-backend.add(legacyPlugin('auth', import('./plugins/auth')));
+backend.add(import('@backstage/plugin-auth-backend'));
 
 // catalog plugin
-// TODO switch to new catalog backend once @janus-idp/backstage-plugin-keycloak-backend supports transformers
-backend.add(legacyPlugin('catalog', import('./plugins/catalog')));
+backend.add(import('@backstage/plugin-catalog-backend'));
+backend.add(import('@backstage/plugin-catalog-backend-module-logs'));
+backend.add(
+  import('@backstage/plugin-catalog-backend-module-scaffolder-entity-model'),
+);
+backend.add(
+  import('@backstage-community/plugin-catalog-backend-module-keycloak'),
+);
+backend.add(import('@internal/backstage-plugin-catalog-backend-module-transformer'))
 
 // permission plugin
-backend.add(import('@backstage/plugin-permission-backend/alpha'));
+backend.add(import('@backstage/plugin-permission-backend'));
 backend.add(import('@internal/backstage-plugin-permission-backend-module-rabe'));
 
 // search plugin
-backend.add(import('@backstage/plugin-search-backend/alpha'));
-backend.add(import('@backstage/plugin-search-backend-module-catalog/alpha'));
-backend.add(import('@backstage/plugin-search-backend-module-techdocs/alpha'));
+backend.add(import('@backstage/plugin-search-backend'));
+backend.add(import('@backstage/plugin-search-backend-module-catalog'));
+backend.add(import('@backstage/plugin-search-backend-module-techdocs'));
 
 // todo plugin
 backend.add(import('@backstage-community/plugin-todo-backend'));

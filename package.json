@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "engines": {
-    "node": "18 || 20"
+    "node": "22"
   },
   "scripts": {
-    "dev": "concurrently \"yarn start\" \"yarn start-backend\"",
+    "dev": "yarn workspaces foreach -A --include backend --include app --parallel -v -i run start",
     "start": "yarn workspace app start",
     "start-backend": "yarn workspace backend start",
     "build:backend": "yarn workspace backend build",
@@ -32,20 +32,18 @@
     "@backstage/cli": "^0.29.4",
     "@backstage/e2e-test-utils": "^0.1.1",
     "@playwright/test": "^1.41.2",
-    "@spotify/prettier-config": "^15.0.0",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "concurrently": "^8.2.2",
-    "lerna": "^8.1.2",
+    "eslint-plugin-jest": "^28.10.0",
     "node-gyp": "^10.0.1",
     "prettier": "^3.2.5",
-    "typescript": "~5.4.2"
+    "typescript": "~5.7.2"
   },
   "resolutions": {
     "@types/react": "^18",
     "@types/react-dom": "^18"
   },
-  "prettier": "@spotify/prettier-config",
+  "prettier": "@backstage/cli/config/prettier",
   "lint-staged": {
     "*.{js,jsx,ts,tsx,mjs,cjs}": [
       "eslint --fix",

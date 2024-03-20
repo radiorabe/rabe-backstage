@@ -32,7 +32,7 @@ import {
 import {
   EntityGithubActionsContent,
   isGithubActionsAvailable,
-} from '@backstage/plugin-github-actions';
+} from '@backstage-community/plugin-github-actions';
 import {
   EntityUserProfileCard,
   EntityGroupProfileCard,
@@ -58,9 +58,9 @@ import {
 
 import { TechDocsAddons } from '@backstage/plugin-techdocs-react';
 import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
-import { EntityTeamPullRequestsContent } from '@backstage/plugin-github-pull-requests-board';
+import { EntityTeamPullRequestsContent } from '@backstage-community/plugin-github-pull-requests-board';
 import { EntityGithubInsightsContent } from '@roadiehq/backstage-plugin-github-insights';
-import { EntityTodoContent } from '@backstage/plugin-todo';
+import { EntityTodoContent } from '@backstage-community/plugin-todo';
 
 const techdocsContent = (
   <EntityTechdocsContent>

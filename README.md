@@ -18,7 +18,7 @@ yarn dev
 To keep it updated, run:
 
 ```sh
-yarn backstage-cli versions:bump --pattern '@{backstage,roadiehq,janus-idp}/*'
+yarn backstage-cli versions:bump --pattern '@{backstage,backstage-community,roadiehq,janus-idp}/*'
 ```
 
 ## Release Management

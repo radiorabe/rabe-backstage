@@ -2,12 +2,12 @@ app:
   title: RaBe Backstage
   baseUrl: http://localhost:3000
   support:
-    url: https://github.com/radiorabe/backstage/issues
+    url: https://github.com/radiorabe/rabe-backstage/issues
     items:
       - title: Issues
         icon: github
         links:
-          - url: https://github.com/radiorabe/backstage/issues
+          - url: https://github.com/radiorabe/rabe-backstage/issues
             title: GitHub Issues
 
 organization:
@@ -43,9 +43,12 @@ backend:
 integrations:
   github:
     - host: github.com
-      # This is a Personal Access Token or PAT from GitHub. You can find out how to generate this token, and more information
-      # about setting up the GitHub integration here: https://backstage.io/docs/integrations/github/locations#configuration
-      token: ${GITHUB_TOKEN}
+      # This is a GitHub App that was generated using the backstage-cli. You can find out how to generate the credentials
+      # file, and more information about setting up the GitHub integration here:
+      # * https://backstage.io/docs/integrations/github/locations#configuration
+      # * https://backstage.io/docs/integrations/github/github-apps
+      apps:
+        - $include: github-app-backstage-credentials.yaml
 
 proxy:
   endpoints:
@@ -71,12 +74,15 @@ auth:
   session:
     secret: ${SESSION_SECRET}
   providers:
-    keycloak:
+    oidc:
       production:
         prompt: auto
         metadataUrl: ${AUTH_KEYCLOAK_METADATA_URL}
         clientId: ${AUTH_KEYCLOAK_CLIENT_ID}
         clientSecret: ${AUTH_KEYCLOAK_CLIENT_SECRET}
+        signIn:
+          resolvers:
+            - resolver: emailMatchingUserEntityProfileEmail
     github:
       production:
         clientId: ${AUTH_GITHUB_CLIENT_ID}

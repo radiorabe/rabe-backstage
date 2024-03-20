@@ -8,11 +8,12 @@ RUN    curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | tee /etc/
 
 COPY ./package.json ./yarn.lock ./
 COPY ./packages ./packages
+COPY ./plugins ./plugins
 COPY .yarnrc.yml ./
 COPY .yarn/ ./.yarn
 
 # Remove all files except package.json
-RUN find packages -mindepth 2 -maxdepth 2 \! -name "package.json" -exec rm -rf {} \+
+RUN find packages plugins -mindepth 2 -maxdepth 2 \! -name "package.json" -exec rm -rf {} \+
 
 RUN yarn install --immutable --network-timeout 600000
 RUN chown 1001:0 ".yarn/install-state.gz"

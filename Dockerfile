@@ -33,7 +33,7 @@ RUN yarn tsc
 RUN yarn build:backend
 
 # Stage 3 - Build the actual backend image and install production dependencies
-FROM ghcr.io/radiorabe/ubi9-minimal:0.6.6
+FROM ghcr.io/radiorabe/ubi9-minimal:0.7.2
 
 ENV APP_ROOT=/opt/app-root \
     # The $HOME is not set by default, but some applications need this variable

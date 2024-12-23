@@ -2,7 +2,7 @@ import React, { PropsWithChildren } from 'react';
 import { makeStyles } from '@material-ui/core';
 import ExtensionIcon from '@material-ui/icons/Extension';
 import { FeatureFlagged } from '@backstage/core-app-api';
-import { CatalogIcon, GroupIcon } from '@backstage/core-components';
+import { CatalogIcon } from '@backstage/core-components';
 import LibraryBooks from '@material-ui/icons/LibraryBooks';
 import CreateComponentIcon from '@material-ui/icons/AddCircleOutline';
 import LogoFull from './LogoFull';
@@ -29,6 +29,7 @@ import {
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { devToolsAdministerPermission } from '@backstage/plugin-devtools-common';
 import { MyGroupsSidebarItem } from '@backstage/plugin-org';
+import GroupIcon from '@material-ui/icons/People';
 
 const useSidebarLogoStyles = makeStyles({
   root: {

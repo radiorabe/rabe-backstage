@@ -22,7 +22,7 @@ jobs:
       id-token: none
     strategy:
       matrix:
-        node-version: [20]
+        node-version: [22]
     steps:
     - uses: actions/checkout@v4
       with:
@@ -41,4 +41,5 @@ jobs:
         report-json: "eslint_report.json"
         only-pr-files: false
       continue-on-error: true
+    - run: yarn tsc
     - run: yarn test

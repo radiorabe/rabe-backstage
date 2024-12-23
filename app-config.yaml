@@ -71,12 +71,15 @@ auth:
   session:
     secret: ${SESSION_SECRET}
   providers:
-    keycloak:
+    oidc:
       production:
         prompt: auto
         metadataUrl: ${AUTH_KEYCLOAK_METADATA_URL}
         clientId: ${AUTH_KEYCLOAK_CLIENT_ID}
         clientSecret: ${AUTH_KEYCLOAK_CLIENT_SECRET}
+        signIn:
+          resolvers:
+            - resolver: emailMatchingUserEntityProfileEmail
     github:
       production:
         clientId: ${AUTH_GITHUB_CLIENT_ID}

@@ -8,6 +8,7 @@ import {
   AnyApiFactory,
   ApiRef,
   BackstageIdentityApi,
+  OAuthApi,
   OpenIdConnectApi,
   ProfileInfoApi,
   SessionApi,
@@ -18,15 +19,15 @@ import {
   oauthRequestApiRef
 } from '@backstage/core-plugin-api';
 
-export const keycloakOIDCAuthApiRef: ApiRef<
-  OpenIdConnectApi & ProfileInfoApi & BackstageIdentityApi & SessionApi
+export const oidcAuthApiRef: ApiRef<
+  OAuthApi & OpenIdConnectApi & ProfileInfoApi & BackstageIdentityApi & SessionApi
 > = createApiRef({
-  id: 'auth.keycloak',
+  id: 'internal.auth.oidc',
 });
 
 export const apis: AnyApiFactory[] = [
   createApiFactory({
-    api: keycloakOIDCAuthApiRef,
+    api: oidcAuthApiRef,
     deps: {
       discoveryApi: discoveryApiRef,
       oauthRequestApi: oauthRequestApiRef,
@@ -38,8 +39,8 @@ export const apis: AnyApiFactory[] = [
         discoveryApi,
         oauthRequestApi,
         provider: {
-          id: 'keycloak',
-          title: 'Keycloak auth provider',
+          id: 'oidc',
+          title: 'OIDC auth provider',
           icon: () => null,
         },
         environment: configApi.getOptionalString('auth.environment'),

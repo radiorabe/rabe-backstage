@@ -48,7 +48,7 @@
     "@janus-idp/backstage-plugin-keycloak-backend": "^1.8.4",
     "@roadiehq/scaffolder-backend-module-http-request": "^4.1.8",
     "app": "link:../app",
-    "better-sqlite3": "^9.4.3",
+    "better-sqlite3": "^11.7.0",
     "dockerode": "^4.0.2",
     "express": "^4.18.2",
     "express-promise-router": "^4.1.1",

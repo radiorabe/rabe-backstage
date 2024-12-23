@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       actions: none
-      checks: none
+      checks: write
       contents: none
       deployments: none
       issues: none
@@ -25,10 +25,20 @@ jobs:
         node-version: [20]
     steps:
     - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn'
     - run: yarn install --immutable
+    - run: yarn lint --format=json --output-file=eslint_report.json --since=37baf355806bdfdf5d6db7ec3e1d223640638206
+      continue-on-error: true
+    - name: Annotate Code Linting Results
+      uses: ataylorme/eslint-annotate-action@v3
+      with:
+        report-json: "eslint_report.json"
+        only-pr-files: false
+      continue-on-error: true
     - run: yarn test

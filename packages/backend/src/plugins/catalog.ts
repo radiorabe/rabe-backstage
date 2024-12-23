@@ -17,7 +17,7 @@ const userTransformer: UserTransformer = async (
   // for data economy reasons we only keep relevant groups
   entity.spec.memberOf = entity.spec.memberOf.filter((x: string) => x.match(GROUP_ALLOW_REGEX))
   // this lets us remove users that do not need to have a profile in backstage
-  if (entity.spec.memberOf.length == 0) return null
+  if (entity.spec.memberOf.length === 0) return null
   return entity;
 };
 

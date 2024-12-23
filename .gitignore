@@ -61,3 +61,6 @@ packages/app/cypress/videos/
 
 # Trivy
 trivy.*
+
+# ESLint
+eslint_report.json

@@ -5,3 +5,4 @@ packages/*/node_modules
 plugins
 *.local.yaml
 trivy.*
+eslint_report.json

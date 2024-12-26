@@ -1,5 +1,5 @@
 # Stage 1 - Install dependencies
-FROM registry.access.redhat.com/ubi9/nodejs-20:latest AS deps
+FROM registry.access.redhat.com/ubi9/nodejs-22:latest AS deps
 USER 0
 
 # Install yarn and libs for building isolated-vm with node-gyp
@@ -8,17 +8,18 @@ RUN    curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | tee /etc/
 
 COPY ./package.json ./yarn.lock ./
 COPY ./packages ./packages
+COPY ./plugins ./plugins
 COPY .yarnrc.yml ./
 COPY .yarn/ ./.yarn
 
 # Remove all files except package.json
-RUN find packages -mindepth 2 -maxdepth 2 \! -name "package.json" -exec rm -rf {} \+
+RUN find packages plugins -mindepth 2 -maxdepth 2 \! -name "package.json" -exec rm -rf {} \+
 
 RUN yarn install --immutable --network-timeout 600000
 RUN chown 1001:0 ".yarn/install-state.gz"
 
 # Stage 2 - Build packages
-FROM registry.access.redhat.com/ubi9/nodejs-20:latest AS build
+FROM registry.access.redhat.com/ubi9/nodejs-22:latest AS build
 USER 0
 
 # Install yarn
@@ -33,14 +34,14 @@ RUN yarn tsc
 RUN yarn build:backend
 
 # Stage 3 - Build the actual backend image and install production dependencies
-FROM ghcr.io/radiorabe/ubi9-minimal:0.6.6
+FROM ghcr.io/radiorabe/ubi9-minimal:0.8.0
 
 ENV APP_ROOT=/opt/app-root \
     # The $HOME is not set by default, but some applications need this variable
     HOME=/opt/app-root/src \
     NPM_RUN=start \
     PLATFORM="el9" \
-    NODEJS_VERSION=20 \
+    NODEJS_VERSION=22 \
     NPM_RUN=start \
     NAME=backstage
 
@@ -91,6 +92,7 @@ RUN    microdnf -y module disable nodejs \
          mkdocs-autorefs \
          'mkdocstrings[python]' \
          mkdocs-techdocs-core \
+         mkdocs-monorepo-plugin \
     && microdnf clean all \
     && useradd -u 1001 -r -g 0 -s /sbin/nologin \
          -c "Default Application User" default \

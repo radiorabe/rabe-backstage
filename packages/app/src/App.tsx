@@ -23,7 +23,7 @@ import { TechDocsAddons } from '@backstage/plugin-techdocs-react';
 import { DevToolsPage } from '@backstage/plugin-devtools';
 import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
 import { UserSettingsPage } from '@backstage/plugin-user-settings';
-import { apis, keycloakOIDCAuthApiRef } from './apis';
+import { apis, oidcAuthApiRef } from './apis';
 import { homePage } from './components/home/HomePage';
 import { entityPage } from './components/catalog/EntityPage';
 import { searchPage } from './components/search/SearchPage';
@@ -63,11 +63,12 @@ const app = createApp({
     SignInPage: props => (
       <SignInPage
         {...props}
+        auto
         provider={{
-          id: 'keycloak-auth-provider',
-          title: 'Keycloak',
-          message: 'Sign in using Keycloak',
-          apiRef: keycloakOIDCAuthApiRef,
+          id: 'oidc-auth-provider',
+          title: 'RaBe Login',
+          message: 'Sign in using RaBe account',
+          apiRef: oidcAuthApiRef,
         }}
       />
     ),

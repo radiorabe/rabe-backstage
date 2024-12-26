@@ -1,32 +1,46 @@
 import { createBackend } from '@backstage/backend-defaults';
-import { legacyPlugin } from '@backstage/backend-common';
 
 const backend = createBackend();
 
-// spa
-backend.add(import('@backstage/plugin-app-backend/alpha'));
+backend.add(import('@backstage/plugin-app-backend'));
+backend.add(import('@backstage/plugin-proxy-backend'))
+backend.add(import('@backstage/plugin-techdocs-backend'));
+backend.add(import('@backstage/plugin-scaffolder-backend'));
+backend.add(import('@backstage/plugin-scaffolder-backend-module-github'));
+backend.add(
+  import('@roadiehq/scaffolder-backend-module-http-request/new-backend'),
+);
 
-// auth and perms
-// TODO: switch to new backend together with perms when ready
-backend.add(legacyPlugin('auth', import('./plugins/auth')));
-// TODO: switch to new catalog backend once docs for @backstage/plugin-permission-backend are available
-backend.add(legacyPlugin('permission', import('./plugins/permission')));
+// auth plugin
+backend.add(import('@backstage/plugin-auth-backend'));
+backend.add(import('@backstage/plugin-auth-backend-module-oidc-provider'));
+backend.add(import('@backstage/plugin-auth-backend-module-github-provider'));
 
-// catalog and templates
-// TODO switch to new catalog backend once @janus-idp/backstage-plugin-keycloak-backend supports transformers
-backend.add(legacyPlugin('catalog', import('./plugins/catalog')));
-// TODO switch to new catalog backend once @roadiehq/scaffolder-backend-module-http-request supports it
-backend.add(legacyPlugin('scaffolder', import('./plugins/scaffolder')));
-backend.add(import('@backstage/plugin-proxy-backend/alpha'))
+// catalog plugin
+backend.add(import('@backstage/plugin-catalog-backend'));
+backend.add(import('@backstage/plugin-catalog-backend-module-logs'));
+backend.add(
+  import('@backstage/plugin-catalog-backend-module-scaffolder-entity-model'),
+);
+backend.add(
+  import('@backstage-community/plugin-catalog-backend-module-keycloak'),
+);
+backend.add(import('@backstage/plugin-catalog-backend-module-github'));
+backend.add(import('@internal/backstage-plugin-catalog-backend-module-transformer'))
 
-// docs and search
-backend.add(import('@backstage/plugin-techdocs-backend/alpha'));
-backend.add(import('@backstage/plugin-search-backend/alpha'));
-backend.add(import('@backstage/plugin-search-backend-module-catalog/alpha'));
-backend.add(import('@backstage/plugin-search-backend-module-techdocs/alpha'));
-backend.add(import('@backstage/plugin-todo-backend'));
+// permission plugin
+backend.add(import('@backstage/plugin-permission-backend'));
+backend.add(import('@internal/backstage-plugin-permission-backend-module-rabe'));
 
-// dev
+// search plugin
+backend.add(import('@backstage/plugin-search-backend'));
+backend.add(import('@backstage/plugin-search-backend-module-catalog'));
+backend.add(import('@backstage/plugin-search-backend-module-techdocs'));
+
+// todo plugin
+backend.add(import('@backstage-community/plugin-todo-backend'));
+
+// dev plugin
 backend.add(import('@backstage/plugin-devtools-backend'));
 
 backend.start();

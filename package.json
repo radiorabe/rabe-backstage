@@ -31,7 +31,7 @@
   "devDependencies": {
     "@backstage/cli": "^0.29.4",
     "@backstage/e2e-test-utils": "^0.1.1",
-    "@playwright/test": "^1.41.2",
+    "@playwright/test": "^1.49.1",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint-plugin-jest": "^28.10.0",

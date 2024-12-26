@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@backstage/cli": "backstage:^",
-    "@backstage/e2e-test-utils": "backstage:^",
+    "@backstage/e2e-test-utils": "patch:@backstage/e2e-test-utils@npm%3A0.1.1#~/.yarn/patches/@backstage-e2e-test-utils-npm-0.1.1-chromium.patch",
     "@playwright/test": "^1.54.2",
     "@types/react": "^18",
     "@types/react-dom": "^18",

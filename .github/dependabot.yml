@@ -13,6 +13,7 @@ updates:
       backstage:
         patterns:
           - "@backstage/*"
+          - "@backstage-community/*"
           - "@roadiehq/*"
           - "@janus-idp/*"
       types-react:

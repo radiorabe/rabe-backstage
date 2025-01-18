@@ -2633,20 +2633,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage-community/plugin-catalog-backend-module-keycloak@npm:^3.2.4":
-  version: 3.2.4
-  resolution: "@backstage-community/plugin-catalog-backend-module-keycloak@npm:3.2.4"
+"@backstage-community/plugin-catalog-backend-module-keycloak@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "@backstage-community/plugin-catalog-backend-module-keycloak@npm:3.3.0"
   dependencies:
-    "@backstage/backend-plugin-api": "npm:^1.0.1"
-    "@backstage/catalog-model": "npm:^1.7.0"
-    "@backstage/errors": "npm:^1.2.4"
-    "@backstage/plugin-catalog-node": "npm:^1.13.1"
+    "@backstage/backend-plugin-api": "npm:^1.1.0"
+    "@backstage/catalog-model": "npm:^1.7.2"
+    "@backstage/errors": "npm:^1.2.6"
+    "@backstage/plugin-catalog-node": "npm:^1.15.0"
     "@keycloak/keycloak-admin-client": "npm:24.0.5"
     inclusion: "npm:^1.0.1"
     lodash: "npm:^4.17.21"
     pg-format: "npm:^1.0.4"
     uuid: "npm:^9.0.1"
-  checksum: 10c0/79557b26a30b69464e38e507c94a4642bcbaa442bdbcdc9c2ec1f4128557e4f42eea9bc7e838bf75611f0148e097a423c997b11e2f9970b3a6b42945c6904b61
+  checksum: 10c0/23b0acd60fa9a7decb48b6b0a375fbb156aaa65ec29a89fea433683b6a36d66e8c4c7e2aa7bdfd72211b34086ae1ab4529b89e3fec4476902ec5609a11553f1b
   languageName: node
   linkType: hard
 
@@ -3091,7 +3091,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/backend-plugin-api@npm:^1.0.0, @backstage/backend-plugin-api@npm:^1.0.1, @backstage/backend-plugin-api@npm:^1.0.2, @backstage/backend-plugin-api@npm:^1.1.0":
+"@backstage/backend-plugin-api@npm:^1.0.0, @backstage/backend-plugin-api@npm:^1.0.2, @backstage/backend-plugin-api@npm:^1.1.0":
   version: 1.1.0
   resolution: "@backstage/backend-plugin-api@npm:1.1.0"
   dependencies:
@@ -4402,7 +4402,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/plugin-catalog-node@npm:^1.13.1, @backstage/plugin-catalog-node@npm:^1.15.0":
+"@backstage/plugin-catalog-node@npm:^1.15.0":
   version: 1.15.0
   resolution: "@backstage/plugin-catalog-node@npm:1.15.0"
   dependencies:
@@ -6991,7 +6991,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@internal/backstage-plugin-catalog-backend-module-transformer@workspace:plugins/catalog-backend-module-transformer"
   dependencies:
-    "@backstage-community/plugin-catalog-backend-module-keycloak": "npm:^3.2.4"
+    "@backstage-community/plugin-catalog-backend-module-keycloak": "npm:^3.3.0"
     "@backstage/backend-common": "npm:^0.25.0"
     "@backstage/backend-plugin-api": "npm:^1.1.0"
     "@backstage/backend-test-utils": "npm:^1.2.0"
@@ -14315,7 +14315,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "backend@workspace:packages/backend"
   dependencies:
-    "@backstage-community/plugin-catalog-backend-module-keycloak": "npm:^3.2.4"
+    "@backstage-community/plugin-catalog-backend-module-keycloak": "npm:^3.3.0"
     "@backstage-community/plugin-todo-backend": "npm:^0.4.0"
     "@backstage/backend-common": "npm:^0.25.0"
     "@backstage/backend-defaults": "npm:^0.6.2"

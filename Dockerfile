@@ -6,7 +6,7 @@ USER 0
 RUN    curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | tee /etc/yum.repos.d/yarn.repo \
     && dnf install -y brotli-devel yarn zlib-devel
 
-COPY ./package.json ./yarn.lock ./
+COPY ./backstage.json ./package.json ./yarn.lock ./
 COPY ./packages ./packages
 COPY ./plugins ./plugins
 COPY .yarnrc.yml ./
@@ -107,7 +107,7 @@ USER 1001
 
 # Copy the install dependencies from the build stage and context
 COPY --from=build /opt/app-root/src/.yarn ./.yarn
-COPY --from=build /opt/app-root/src/yarn.lock /opt/app-root/src/package.json /opt/app-root/src/.yarnrc.yml /opt/app-root/src/packages/backend/dist/skeleton.tar.gz ./
+COPY --from=build /opt/app-root/src/backstage.json /opt/app-root/src/package.json /opt/app-root/src/yarn.lock /opt/app-root/src/.yarnrc.yml /opt/app-root/src/packages/backend/dist/skeleton.tar.gz ./
 RUN tar xzf skeleton.tar.gz && rm skeleton.tar.gz
 
 # Install production dependencies, ignoring scripts so we don't need a node-gyp toolchain to rebuild binary modules

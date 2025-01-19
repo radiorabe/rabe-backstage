@@ -126,6 +126,9 @@ RUN tar xzf bundle.tar.gz && rm bundle.tar.gz
 COPY ./app-config.yaml .
 COPY ./app-config.production.yaml .
 
+# Fix better-sqlite3 loading issues, the package is getting hoisted but the ServiceRegistry tries to load the compiled better_sqlite3.node file from the wrong location.
+RUN cp -r ./node_modules/better-sqlite3/build/Release ./node_modules/\@backstage/backend-defaults/node_modules/better-sqlite3/
+
 # The fix-permissions script is important when operating in environments that dynamically use a random UID at runtime, such as OpenShift.
 # The upstream backstage image does not account for this and it causes the container to fail at runtime.
 #RUN fix-permissions ./

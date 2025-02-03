@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@backstage-community/plugin-catalog-backend-module-keycloak": "^3.3.0",
-    "@backstage-community/plugin-todo-backend": "^0.4.0",
+    "@backstage-community/plugin-todo-backend": "^0.5.0",
     "@backstage/backend-common": "^0.25.0",
     "@backstage/backend-defaults": "backstage:^",
     "@backstage/backend-plugin-api": "backstage:^",

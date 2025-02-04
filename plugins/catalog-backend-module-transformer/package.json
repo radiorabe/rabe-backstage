@@ -28,7 +28,7 @@
     "postpack": "backstage-cli package postpack"
   },
   "dependencies": {
-    "@backstage-community/plugin-catalog-backend-module-keycloak": "^3.3.0",
+    "@backstage-community/plugin-catalog-backend-module-keycloak": "^3.4.0",
     "@backstage/backend-common": "^0.25.0",
     "@backstage/backend-plugin-api": "backstage:^"
   },

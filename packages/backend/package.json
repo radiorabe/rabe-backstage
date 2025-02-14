@@ -56,7 +56,7 @@
     "dockerode": "^4.0.4",
     "express": "^4.18.2",
     "express-promise-router": "^4.1.1",
-    "node-gyp": "^11.0.0",
+    "node-gyp": "^11.1.0",
     "pg": "^8.11.4"
   },
   "devDependencies": {

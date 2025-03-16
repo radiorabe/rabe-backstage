@@ -1,6 +1,7 @@
 {
   "name": "root",
-  "version": "1.0.0",
+  "version": "0.0.0",
+  "license": "AGPL-3.0-only",
   "private": true,
   "engines": {
     "node": "22"
@@ -20,7 +21,7 @@
     "lint": "backstage-cli repo lint --since origin/main",
     "lint:all": "backstage-cli repo lint",
     "prettier:check": "prettier --check .",
-    "new": "backstage-cli new --scope internal"
+    "new": "backstage-cli new"
   },
   "workspaces": {
     "packages": [
@@ -52,6 +53,15 @@
     "*.{json,md}": [
       "prettier --write"
     ]
+  },
+  "backstage": {
+    "cli": {
+      "new": {
+        "globals": {
+          "license": "AGPL-3.0-only"
+        }
+      }
+    }
   },
   "packageManager": "yarn@4.6.0"
 }

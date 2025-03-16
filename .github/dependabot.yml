@@ -22,6 +22,9 @@ updates:
       react:
         patterns:
           - "react*"
+      babel:
+        patterns:
+          - "@babel/*"
   - package-ecosystem: "docker"
     directory: "/"
     schedule:

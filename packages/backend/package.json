@@ -16,8 +16,8 @@
     "build-image": "docker build ../.. -f ../../Dockerfile --tag backstage"
   },
   "dependencies": {
-    "@backstage-community/plugin-catalog-backend-module-keycloak": "^3.5.1",
-    "@backstage-community/plugin-todo-backend": "^0.5.0",
+    "@backstage-community/plugin-catalog-backend-module-keycloak": "^3.8.0",
+    "@backstage-community/plugin-todo-backend": "^0.7.0",
     "@backstage/backend-common": "^0.25.0",
     "@backstage/backend-defaults": "backstage:^",
     "@backstage/backend-plugin-api": "backstage:^",
@@ -50,7 +50,7 @@
     "@backstage/plugin-techdocs-backend": "backstage:^",
     "@internal/backstage-plugin-catalog-backend-module-transformer": "workspace:^",
     "@internal/backstage-plugin-permission-backend-module-rabe": "workspace:^",
-    "@roadiehq/scaffolder-backend-module-http-request": "^5.3.0",
+    "@roadiehq/scaffolder-backend-module-http-request": "^5.3.1",
     "app": "link:../app",
     "better-sqlite3": "^11.8.1",
     "dockerode": "^4.0.4",

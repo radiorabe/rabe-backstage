@@ -3196,8 +3196,8 @@ __metadata:
   linkType: hard
 
 "@backstage/cli@npm:^0.31.0":
-  version: 0.31.0
-  resolution: "@backstage/cli@npm:0.31.0"
+  version: 0.31.1
+  resolution: "@backstage/cli@npm:0.31.1"
   dependencies:
     "@backstage/catalog-model": "npm:^1.7.3"
     "@backstage/cli-common": "npm:^0.1.15"
@@ -3326,7 +3326,7 @@ __metadata:
       optional: true
   bin:
     backstage-cli: bin/backstage-cli
-  checksum: 10c0/324932ab7d1a41366a0958d62d6fa4c85d9fa596733313e6c166b7309f8ffedb0414947e1797a188d2e9f40015f790c6aab2e8630c33cf6f87bf201ec0eca89d
+  checksum: 10c0/7e5883f040eb8221842aaccfb41f0089b770678e8d6f8e2a53115a6e7c8e509251df62c6dbf1b68154c143b845f0ddb4bb41ad43ca05cf0db7b1668bbf9f080f
   languageName: node
   linkType: hard
 
@@ -4361,8 +4361,8 @@ __metadata:
   linkType: hard
 
 "@backstage/plugin-catalog-import@npm:^0.12.11":
-  version: 0.12.11
-  resolution: "@backstage/plugin-catalog-import@npm:0.12.11"
+  version: 0.12.12
+  resolution: "@backstage/plugin-catalog-import@npm:0.12.12"
   dependencies:
     "@backstage/catalog-client": "npm:^1.9.1"
     "@backstage/catalog-model": "npm:^1.7.3"
@@ -4394,7 +4394,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10c0/55989b6860fb354d7a765dad2cd7d4a29b2013a81e3d1e0bdd3dad47479bdb5273034f95c87f884494445c244a868ca4a764e5ce92f64578922abd87512cf06b
+  checksum: 10c0/ac304dd38971dceed8e1ce31364febba18d8c69db89a13b6c7154985709eabd0e143a35269ef7d9215aeff4e37e881aeb242e725ffad966d3a49d1be1a6a07d4
   languageName: node
   linkType: hard
 

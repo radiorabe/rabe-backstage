@@ -38,7 +38,7 @@
     "eslint-plugin-jest": "^28.11.0",
     "node-gyp": "^11.2.0",
     "prettier": "^3.5.1",
-    "typescript": "~5.8.0"
+    "typescript": "~5.8.3"
   },
   "resolutions": {
     "@types/react": "^18",

@@ -14785,7 +14785,7 @@ __metadata:
     dockerode: "npm:^4.0.5"
     express: "npm:^4.18.2"
     express-promise-router: "npm:^4.1.1"
-    node-gyp: "npm:^11.1.0"
+    node-gyp: "npm:^11.2.0"
     pg: "npm:^8.14.1"
   languageName: unknown
   linkType: soft
@@ -25133,7 +25133,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-gyp@npm:^11.1.0, node-gyp@npm:latest":
+"node-gyp@npm:^11.2.0":
+  version: 11.2.0
+  resolution: "node-gyp@npm:11.2.0"
+  dependencies:
+    env-paths: "npm:^2.2.0"
+    exponential-backoff: "npm:^3.1.1"
+    graceful-fs: "npm:^4.2.6"
+    make-fetch-happen: "npm:^14.0.3"
+    nopt: "npm:^8.0.0"
+    proc-log: "npm:^5.0.0"
+    semver: "npm:^7.3.5"
+    tar: "npm:^7.4.3"
+    tinyglobby: "npm:^0.2.12"
+    which: "npm:^5.0.0"
+  bin:
+    node-gyp: bin/node-gyp.js
+  checksum: 10c0/bd8d8c76b06be761239b0c8680f655f6a6e90b48e44d43415b11c16f7e8c15be346fba0cbf71588c7cdfb52c419d928a7d3db353afc1d952d19756237d8f10b9
+  languageName: node
+  linkType: hard
+
+"node-gyp@npm:latest":
   version: 11.1.0
   resolution: "node-gyp@npm:11.1.0"
   dependencies:
@@ -28990,7 +29010,7 @@ __metadata:
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
     eslint-plugin-jest: "npm:^28.11.0"
-    node-gyp: "npm:^11.1.0"
+    node-gyp: "npm:^11.2.0"
     prettier: "npm:^3.5.1"
     typescript: "npm:~5.8.0"
   languageName: unknown
@@ -30874,7 +30894,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tinyglobby@npm:^0.2.9":
+"tinyglobby@npm:^0.2.12, tinyglobby@npm:^0.2.9":
   version: 0.2.12
   resolution: "tinyglobby@npm:0.2.12"
   dependencies:

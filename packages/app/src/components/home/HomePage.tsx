@@ -1,4 +1,3 @@
-import React from 'react';
 import { Grid } from '@material-ui/core';
 import { Content, Header, Page } from '@backstage/core-components';
 import LocalLibrary from '@material-ui/icons/LocalLibrary';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Route } from 'react-router-dom';
 import { HomepageCompositionRoot } from '@backstage/plugin-home';
 import { apiDocsPlugin, ApiExplorerPage } from '@backstage/plugin-api-docs';

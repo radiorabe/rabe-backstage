@@ -29,6 +29,7 @@ import {
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { devToolsAdministerPermission } from '@backstage/plugin-devtools-common';
 import { MyGroupsSidebarItem } from '@backstage/plugin-org';
+import { NotificationsSidebarItem } from '@backstage/plugin-notifications';
 
 const useSidebarLogoStyles = makeStyles({
   root: {
@@ -83,6 +84,14 @@ export const Root = ({ children }: PropsWithChildren<{}>) => (
       </SidebarGroup>
       <SidebarSpace />
       <SidebarDivider />
+      <FeatureFlagged with="development">
+        <SidebarGroup
+	  label="Notifications"
+	  to="/notifications"
+	>
+	  <NotificationsSidebarItem />
+        </SidebarGroup>
+      </FeatureFlagged>
       <SidebarGroup
         label="Settings"
         icon={<UserSettingsSignInAvatar />}

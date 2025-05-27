@@ -3127,9 +3127,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage-community/plugin-todo@npm:^0.7.0":
-  version: 0.7.0
-  resolution: "@backstage-community/plugin-todo@npm:0.7.0"
+"@backstage-community/plugin-todo@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "@backstage-community/plugin-todo@npm:0.8.0"
   dependencies:
     "@backstage/catalog-model": "npm:^1.7.3"
     "@backstage/core-components": "npm:^0.17.1"
@@ -3142,7 +3142,7 @@ __metadata:
     react: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-dom: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-router-dom: 6.0.0-beta.0 || ^6.3.0
-  checksum: 10c0/53f73a9a04b000fb63818edabb32a09f1f4e7c366f0dcafd6b9e7f0dfda5bf2bb6878939ede6fc978449ab29bbb52769d0bed4459e577d5b6186cc8bc491de3c
+  checksum: 10c0/7a4694e9d1b10fbe6370256db2aef47595bb86765bf025bdeeb23fd26e031f4de923d806dae3ef65947e5af9d86be7a4960e3cf43d5db4ce9de0eba8332948c1
   languageName: node
   linkType: hard
 
@@ -15393,7 +15393,7 @@ __metadata:
   dependencies:
     "@backstage-community/plugin-github-actions": "npm:^0.10.0"
     "@backstage-community/plugin-github-pull-requests-board": "npm:^0.5.1"
-    "@backstage-community/plugin-todo": "npm:^0.7.0"
+    "@backstage-community/plugin-todo": "npm:^0.8.0"
     "@backstage/app-defaults": "backstage:^"
     "@backstage/canon": "backstage:^"
     "@backstage/catalog-model": "backstage:^"

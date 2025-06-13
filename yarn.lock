@@ -19512,9 +19512,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest@npm:^28.13.0":
-  version: 28.13.0
-  resolution: "eslint-plugin-jest@npm:28.13.0"
+"eslint-plugin-jest@npm:^28.13.5":
+  version: 28.13.5
+  resolution: "eslint-plugin-jest@npm:28.13.5"
   dependencies:
     "@typescript-eslint/utils": "npm:^6.0.0 || ^7.0.0 || ^8.0.0"
   peerDependencies:
@@ -19526,7 +19526,7 @@ __metadata:
       optional: true
     jest:
       optional: true
-  checksum: 10c0/5b0f1bc950bc1d650732ab16b0073daf5dff5a3cc5aa187deb1e8e135ff8f7a944ddf588358fd13122728c16112592440648e2430e52fee2f2d45e0b11743ff3
+  checksum: 10c0/7fcf1d73f04e839b54c6803e3b16dd118a85b5cc56fa7338041b27329382887b00218dc3b70dd88de73a86c169d69c56d3fafa4e04379684dc0939303c3e6908
   languageName: node
   linkType: hard
 
@@ -30205,7 +30205,7 @@ __metadata:
     "@playwright/test": "npm:^1.52.0"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
-    eslint-plugin-jest: "npm:^28.13.0"
+    eslint-plugin-jest: "npm:^28.13.5"
     node-gyp: "npm:^11.2.0"
     prettier: "npm:^3.5.1"
     typescript: "npm:~5.8.3"

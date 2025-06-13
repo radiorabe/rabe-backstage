@@ -3754,7 +3754,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/core-app-api@npm:^1.15.2, @backstage/core-app-api@npm:^1.16.1":
+"@backstage/core-app-api@npm:^1.16.1":
   version: 1.16.1
   resolution: "@backstage/core-app-api@npm:1.16.1"
   dependencies:
@@ -10920,18 +10920,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@roadiehq/scaffolder-backend-module-http-request@npm:^5.3.1":
-  version: 5.3.1
-  resolution: "@roadiehq/scaffolder-backend-module-http-request@npm:5.3.1"
+"@roadiehq/scaffolder-backend-module-http-request@npm:^5.3.2":
+  version: 5.3.2
+  resolution: "@roadiehq/scaffolder-backend-module-http-request@npm:5.3.2"
   dependencies:
-    "@backstage/backend-common": "npm:^0.25.0"
     "@backstage/backend-plugin-api": "npm:^1.0.2"
-    "@backstage/core-app-api": "npm:^1.15.2"
     "@backstage/core-plugin-api": "npm:^1.10.1"
     "@backstage/plugin-scaffolder-node": "npm:^0.6.2"
     cross-fetch: "npm:^4.0.0"
-    winston: "npm:^3.2.1"
-  checksum: 10c0/cb878b84e9bd795b8768819e6f0c77968db2ff145bd97b1c4e2d9e2b2115733a8e0790ab0ada92151ed614cf480f921909a57e00c19a24b79dee9cd35a1518d2
+  checksum: 10c0/c6d20b90e87e4a74f4440b229030f0e5fd3f9f2149ffa2488b1d99e6348a74bb5b05f50c781f8915c1df44f07c13391a969b01cfc61641882391ef04efb14e40
   languageName: node
   linkType: hard
 
@@ -15974,7 +15971,7 @@ __metadata:
     "@backstage/plugin-techdocs-backend": "backstage:^"
     "@internal/backstage-plugin-catalog-backend-module-transformer": "workspace:^"
     "@internal/backstage-plugin-permission-backend-module-rabe": "workspace:^"
-    "@roadiehq/scaffolder-backend-module-http-request": "npm:^5.3.1"
+    "@roadiehq/scaffolder-backend-module-http-request": "npm:^5.3.2"
     "@types/dockerode": "npm:^3"
     "@types/luxon": "npm:^3"
     app: "link:../app"

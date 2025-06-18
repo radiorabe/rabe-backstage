@@ -38,7 +38,7 @@
   "devDependencies": {
     "@backstage/backend-test-utils": "backstage:^",
     "@backstage/cli": "backstage:^",
-    "@types/jest": "^29"
+    "@types/jest": "^30"
   },
   "files": [
     "dist"

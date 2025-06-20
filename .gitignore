@@ -63,3 +63,6 @@ trivy.*
 
 # ESLint
 eslint_report.json
+
+# Cache
+.cache/

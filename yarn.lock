@@ -3051,14 +3051,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage-community/plugin-catalog-backend-module-keycloak@npm:^3.11.1":
-  version: 3.11.1
-  resolution: "@backstage-community/plugin-catalog-backend-module-keycloak@npm:3.11.1"
+"@backstage-community/plugin-catalog-backend-module-keycloak@npm:^3.12.0":
+  version: 3.12.0
+  resolution: "@backstage-community/plugin-catalog-backend-module-keycloak@npm:3.12.0"
   dependencies:
-    "@backstage/backend-plugin-api": "npm:^1.3.0"
-    "@backstage/catalog-model": "npm:^1.7.3"
+    "@backstage/backend-plugin-api": "npm:^1.3.1"
+    "@backstage/catalog-model": "npm:^1.7.4"
     "@backstage/errors": "npm:^1.2.7"
-    "@backstage/plugin-catalog-node": "npm:^1.16.3"
+    "@backstage/plugin-catalog-node": "npm:^1.17.0"
     "@keycloak/keycloak-admin-client": "npm:26.1.4"
     "@opentelemetry/api": "npm:^1.9.0"
     jsonwebtoken: "npm:^9.0.0"
@@ -3066,7 +3066,7 @@ __metadata:
     p-limit: "npm:^6.1.0"
     pg-format: "npm:^1.0.4"
     uuid: "npm:^9.0.1"
-  checksum: 10c0/74d86cca27a1167864eb7f05bb11125595425fb99dedd273ee09b589c8d94a7e6bdb094b60cc7f5b7f4836fef8561c59da580f30ef65ad6418efc978ae57d37c
+  checksum: 10c0/c3bb512914c6a871bc94f60899b1ac6364f589634c4cd3f135287e07569eb3d083dfe254f9e1094f054baacb8bf994ec793997f17ff5f501f68074c6968206ce
   languageName: node
   linkType: hard
 
@@ -5323,22 +5323,6 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 10c0/90bcba7e3604b0f33cea0038c37fb22f0334d7617b0790a048f1ddf6d45e7e66fb4d3c469961c3a9a5a4102ea031a1c9b2863cd8fae419399c432112cf8519e5
-  languageName: node
-  linkType: hard
-
-"@backstage/plugin-catalog-node@npm:^1.16.3":
-  version: 1.16.3
-  resolution: "@backstage/plugin-catalog-node@npm:1.16.3"
-  dependencies:
-    "@backstage/backend-plugin-api": "npm:^1.3.0"
-    "@backstage/catalog-client": "npm:^1.9.1"
-    "@backstage/catalog-model": "npm:^1.7.3"
-    "@backstage/errors": "npm:^1.2.7"
-    "@backstage/plugin-catalog-common": "npm:^1.1.3"
-    "@backstage/plugin-permission-common": "npm:^0.8.4"
-    "@backstage/plugin-permission-node": "npm:^0.9.1"
-    "@backstage/types": "npm:^1.2.1"
-  checksum: 10c0/d3ded2956504216896e15fe375ae1abb2f11140d02a5cc0ac4c9cc8ca386c8dd5a3c79efb683bc60cd3bdf7e488892de67141a9ec6c6fff124a266b7efcf56a3
   languageName: node
   linkType: hard
 
@@ -8398,7 +8382,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@internal/backstage-plugin-catalog-backend-module-transformer@workspace:plugins/catalog-backend-module-transformer"
   dependencies:
-    "@backstage-community/plugin-catalog-backend-module-keycloak": "npm:^3.11.1"
+    "@backstage-community/plugin-catalog-backend-module-keycloak": "npm:^3.12.0"
     "@backstage/backend-common": "npm:^0.25.0"
     "@backstage/backend-plugin-api": "backstage:^"
     "@backstage/backend-test-utils": "backstage:^"
@@ -13325,15 +13309,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@roadiehq/scaffolder-backend-module-http-request@npm:^5.3.2":
-  version: 5.3.2
-  resolution: "@roadiehq/scaffolder-backend-module-http-request@npm:5.3.2"
+"@roadiehq/scaffolder-backend-module-http-request@npm:^5.3.3":
+  version: 5.3.3
+  resolution: "@roadiehq/scaffolder-backend-module-http-request@npm:5.3.3"
   dependencies:
     "@backstage/backend-plugin-api": "npm:^1.0.2"
     "@backstage/core-plugin-api": "npm:^1.10.1"
     "@backstage/plugin-scaffolder-node": "npm:^0.6.2"
     cross-fetch: "npm:^4.0.0"
-  checksum: 10c0/c6d20b90e87e4a74f4440b229030f0e5fd3f9f2149ffa2488b1d99e6348a74bb5b05f50c781f8915c1df44f07c13391a969b01cfc61641882391ef04efb14e40
+  checksum: 10c0/ba5e720f02c3594914df4813061a14b814038af75374dcbfb8e270a75f84ff4356ab0c26a744c874030ed58a394c3e500c56f3d855cdfc9be4046cc5ac0d1a5e
   languageName: node
   linkType: hard
 
@@ -18442,7 +18426,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "backend@workspace:packages/backend"
   dependencies:
-    "@backstage-community/plugin-catalog-backend-module-keycloak": "npm:^3.11.1"
+    "@backstage-community/plugin-catalog-backend-module-keycloak": "npm:^3.12.0"
     "@backstage-community/plugin-todo-backend": "npm:^0.10.0"
     "@backstage/backend-defaults": "backstage:^"
     "@backstage/backend-plugin-api": "backstage:^"
@@ -18477,7 +18461,7 @@ __metadata:
     "@backstage/plugin-techdocs-backend": "backstage:^"
     "@internal/backstage-plugin-catalog-backend-module-transformer": "workspace:^"
     "@internal/backstage-plugin-permission-backend-module-rabe": "workspace:^"
-    "@roadiehq/scaffolder-backend-module-http-request": "npm:^5.3.2"
+    "@roadiehq/scaffolder-backend-module-http-request": "npm:^5.3.3"
     "@types/dockerode": "npm:^3"
     "@types/luxon": "npm:^3"
     app: "link:../app"

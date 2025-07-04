@@ -5289,8 +5289,8 @@ __metadata:
   linkType: hard
 
 "@backstage/plugin-catalog-import@backstage:^::backstage=1.40.1&npm=0.13.1, @backstage/plugin-catalog-import@npm:^0.13.1":
-  version: 0.13.1
-  resolution: "@backstage/plugin-catalog-import@npm:0.13.1"
+  version: 0.13.2
+  resolution: "@backstage/plugin-catalog-import@npm:0.13.2"
   dependencies:
     "@backstage/catalog-client": "npm:^1.10.1"
     "@backstage/catalog-model": "npm:^1.7.4"
@@ -5322,7 +5322,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10c0/90bcba7e3604b0f33cea0038c37fb22f0334d7617b0790a048f1ddf6d45e7e66fb4d3c469961c3a9a5a4102ea031a1c9b2863cd8fae419399c432112cf8519e5
+  checksum: 10c0/52302de8f90ffaa0dd8cd04eaad50e61549fcf6601071808c7e7b26bd2978d84a46fc805e407c63507e88963db3438238b686a58ee21f6c92b73aa903a3f1a32
   languageName: node
   linkType: hard
 
@@ -13309,15 +13309,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@roadiehq/scaffolder-backend-module-http-request@npm:^5.3.3":
-  version: 5.3.3
-  resolution: "@roadiehq/scaffolder-backend-module-http-request@npm:5.3.3"
+"@roadiehq/scaffolder-backend-module-http-request@npm:^5.3.4":
+  version: 5.3.4
+  resolution: "@roadiehq/scaffolder-backend-module-http-request@npm:5.3.4"
   dependencies:
     "@backstage/backend-plugin-api": "npm:^1.0.2"
     "@backstage/core-plugin-api": "npm:^1.10.1"
     "@backstage/plugin-scaffolder-node": "npm:^0.6.2"
     cross-fetch: "npm:^4.0.0"
-  checksum: 10c0/ba5e720f02c3594914df4813061a14b814038af75374dcbfb8e270a75f84ff4356ab0c26a744c874030ed58a394c3e500c56f3d855cdfc9be4046cc5ac0d1a5e
+  checksum: 10c0/a03e3b61ac98c9c72145f3ae6205e0936afcca83d352017eaa96f5f194f788f4d78126a6e6452439a1264eb9f25d744b430f8a605582949995b7808178925ef1
   languageName: node
   linkType: hard
 
@@ -18461,7 +18461,7 @@ __metadata:
     "@backstage/plugin-techdocs-backend": "backstage:^"
     "@internal/backstage-plugin-catalog-backend-module-transformer": "workspace:^"
     "@internal/backstage-plugin-permission-backend-module-rabe": "workspace:^"
-    "@roadiehq/scaffolder-backend-module-http-request": "npm:^5.3.3"
+    "@roadiehq/scaffolder-backend-module-http-request": "npm:^5.3.4"
     "@types/dockerode": "npm:^3"
     "@types/luxon": "npm:^3"
     app: "link:../app"

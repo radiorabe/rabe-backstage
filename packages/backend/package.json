@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@backstage-community/plugin-catalog-backend-module-keycloak": "^3.12.1",
-    "@backstage-community/plugin-todo-backend": "^0.11.0",
+    "@backstage-community/plugin-todo-backend": "^0.12.0",
     "@backstage/backend-defaults": "backstage:^",
     "@backstage/backend-plugin-api": "backstage:^",
     "@backstage/catalog-client": "backstage:^",
@@ -51,7 +51,7 @@
     "@backstage/plugin-techdocs-backend": "backstage:^",
     "@internal/backstage-plugin-catalog-backend-module-transformer": "workspace:^",
     "@internal/backstage-plugin-permission-backend-module-rabe": "workspace:^",
-    "@roadiehq/scaffolder-backend-module-http-request": "^5.3.4",
+    "@roadiehq/scaffolder-backend-module-http-request": "^5.4.0",
     "app": "link:../app",
     "better-sqlite3": "^12.2.0",
     "dockerode": "^4.0.7",

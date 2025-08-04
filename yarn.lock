@@ -3071,9 +3071,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage-community/plugin-github-actions@npm:^0.13.0":
-  version: 0.13.0
-  resolution: "@backstage-community/plugin-github-actions@npm:0.13.0"
+"@backstage-community/plugin-github-actions@npm:^0.13.1":
+  version: 0.13.1
+  resolution: "@backstage-community/plugin-github-actions@npm:0.13.1"
   dependencies:
     "@backstage/catalog-model": "npm:^1.7.5"
     "@backstage/core-compat-api": "npm:^0.4.4"
@@ -3095,7 +3095,7 @@ __metadata:
     react: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-dom: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-router-dom: 6.0.0-beta.0 || ^6.3.0
-  checksum: 10c0/84fd214051f6e080ae6c6bc19d3cb838b687bd02d1f2f59ea3981377fcae7d6c5c5ee301a572628f69e193f7d86e9aca8647ae868ce623d5841b07dc40876194
+  checksum: 10c0/fbb5429f100430c999ba660c204f8b433b62a2e6c3391222e3a49c7b48557fa45873344fb26d94ae2bfad2d3217ec9bb851213e1f210b7fb35d169e299a436db
   languageName: node
   linkType: hard
 
@@ -3146,14 +3146,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage-community/plugin-todo@npm:^0.11.0":
-  version: 0.11.0
-  resolution: "@backstage-community/plugin-todo@npm:0.11.0"
+"@backstage-community/plugin-todo@npm:^0.11.1":
+  version: 0.11.1
+  resolution: "@backstage-community/plugin-todo@npm:0.11.1"
   dependencies:
     "@backstage/catalog-model": "npm:^1.7.5"
+    "@backstage/core-compat-api": "npm:^0.4.4"
     "@backstage/core-components": "npm:^0.17.4"
     "@backstage/core-plugin-api": "npm:^1.10.9"
     "@backstage/errors": "npm:^1.2.7"
+    "@backstage/frontend-plugin-api": "npm:^0.10.4"
     "@backstage/plugin-catalog-react": "npm:^1.19.1"
     "@material-ui/icons": "npm:^4.9.1"
     "@types/react": "npm:^16.13.1 || ^17.0.0"
@@ -3161,7 +3163,7 @@ __metadata:
     react: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-dom: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-router-dom: 6.0.0-beta.0 || ^6.3.0
-  checksum: 10c0/0846beb74ae74ef8a19673ea32eb6526f0b2404d3c2d92bd1b082e798a399bd3d79f3a349f8deee259ed6e489a1af8bf1affe505c895188777e2cfc9473209fd
+  checksum: 10c0/6deb1775e938056560d98fef00b326adbde64dd8ac8917a4a3965328e735307ea7ef8bb660200033521bef9484abd0eca94d6c75a09045832557036fd955e902
   languageName: node
   linkType: hard
 
@@ -17065,9 +17067,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "app@workspace:packages/app"
   dependencies:
-    "@backstage-community/plugin-github-actions": "npm:^0.13.0"
+    "@backstage-community/plugin-github-actions": "npm:^0.13.1"
     "@backstage-community/plugin-github-pull-requests-board": "npm:^0.8.0"
-    "@backstage-community/plugin-todo": "npm:^0.11.0"
+    "@backstage-community/plugin-todo": "npm:^0.11.1"
     "@backstage/app-defaults": "backstage:^"
     "@backstage/catalog-model": "backstage:^"
     "@backstage/cli": "backstage:^"

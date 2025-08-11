@@ -17,7 +17,7 @@
     "build-image": "docker build ../.. -f ../../Dockerfile --tag backstage"
   },
   "dependencies": {
-    "@backstage-community/plugin-catalog-backend-module-keycloak": "^3.12.1",
+    "@backstage-community/plugin-catalog-backend-module-keycloak": "^3.12.2",
     "@backstage-community/plugin-todo-backend": "^0.12.0",
     "@backstage/backend-defaults": "backstage:^",
     "@backstage/backend-plugin-api": "backstage:^",

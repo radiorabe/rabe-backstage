@@ -3051,29 +3051,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage-community/plugin-catalog-backend-module-keycloak@npm:^3.12.1":
-  version: 3.12.1
-  resolution: "@backstage-community/plugin-catalog-backend-module-keycloak@npm:3.12.1"
+"@backstage-community/plugin-catalog-backend-module-keycloak@npm:^3.12.2":
+  version: 3.12.2
+  resolution: "@backstage-community/plugin-catalog-backend-module-keycloak@npm:3.12.2"
   dependencies:
     "@backstage/backend-plugin-api": "npm:^1.3.1"
     "@backstage/catalog-model": "npm:^1.7.4"
     "@backstage/errors": "npm:^1.2.7"
     "@backstage/plugin-catalog-backend-module-logs": "npm:^0.1.10"
     "@backstage/plugin-catalog-node": "npm:^1.17.0"
-    "@keycloak/keycloak-admin-client": "npm:26.1.4"
+    "@keycloak/keycloak-admin-client": "npm:26.3.1"
     "@opentelemetry/api": "npm:^1.9.0"
     jsonwebtoken: "npm:^9.0.0"
     lodash: "npm:^4.17.21"
     p-limit: "npm:^6.1.0"
     pg-format: "npm:^1.0.4"
     uuid: "npm:^9.0.1"
-  checksum: 10c0/ae2666249d958f25ed33e512f7444e99d59f3148a04e56309290c7bdc562dbba2012397134a2d4f37d959783f5fb5cfe1d0dce3ed731b50df5da6788d1ec7236
+  checksum: 10c0/c207e6d20e617cfffdcf5dd8560dffbe03806778fc419ec6ddad7f09de1dd0007c46d94c1c74da2f9dfb729cd3670cc4defe97034b0122670a78b002b8219a2e
   languageName: node
   linkType: hard
 
-"@backstage-community/plugin-github-actions@npm:^0.13.0":
-  version: 0.13.0
-  resolution: "@backstage-community/plugin-github-actions@npm:0.13.0"
+"@backstage-community/plugin-github-actions@npm:^0.13.1":
+  version: 0.13.1
+  resolution: "@backstage-community/plugin-github-actions@npm:0.13.1"
   dependencies:
     "@backstage/catalog-model": "npm:^1.7.5"
     "@backstage/core-compat-api": "npm:^0.4.4"
@@ -3095,7 +3095,7 @@ __metadata:
     react: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-dom: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-router-dom: 6.0.0-beta.0 || ^6.3.0
-  checksum: 10c0/84fd214051f6e080ae6c6bc19d3cb838b687bd02d1f2f59ea3981377fcae7d6c5c5ee301a572628f69e193f7d86e9aca8647ae868ce623d5841b07dc40876194
+  checksum: 10c0/fbb5429f100430c999ba660c204f8b433b62a2e6c3391222e3a49c7b48557fa45873344fb26d94ae2bfad2d3217ec9bb851213e1f210b7fb35d169e299a436db
   languageName: node
   linkType: hard
 
@@ -3146,14 +3146,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage-community/plugin-todo@npm:^0.11.0":
-  version: 0.11.0
-  resolution: "@backstage-community/plugin-todo@npm:0.11.0"
+"@backstage-community/plugin-todo@npm:^0.11.1":
+  version: 0.11.1
+  resolution: "@backstage-community/plugin-todo@npm:0.11.1"
   dependencies:
     "@backstage/catalog-model": "npm:^1.7.5"
+    "@backstage/core-compat-api": "npm:^0.4.4"
     "@backstage/core-components": "npm:^0.17.4"
     "@backstage/core-plugin-api": "npm:^1.10.9"
     "@backstage/errors": "npm:^1.2.7"
+    "@backstage/frontend-plugin-api": "npm:^0.10.4"
     "@backstage/plugin-catalog-react": "npm:^1.19.1"
     "@material-ui/icons": "npm:^4.9.1"
     "@types/react": "npm:^16.13.1 || ^17.0.0"
@@ -3161,7 +3163,7 @@ __metadata:
     react: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-dom: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-router-dom: 6.0.0-beta.0 || ^6.3.0
-  checksum: 10c0/0846beb74ae74ef8a19673ea32eb6526f0b2404d3c2d92bd1b082e798a399bd3d79f3a349f8deee259ed6e489a1af8bf1affe505c895188777e2cfc9473209fd
+  checksum: 10c0/6deb1775e938056560d98fef00b326adbde64dd8ac8917a4a3965328e735307ea7ef8bb660200033521bef9484abd0eca94d6c75a09045832557036fd955e902
   languageName: node
   linkType: hard
 
@@ -7699,7 +7701,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@internal/backstage-plugin-catalog-backend-module-transformer@workspace:plugins/catalog-backend-module-transformer"
   dependencies:
-    "@backstage-community/plugin-catalog-backend-module-keycloak": "npm:^3.12.1"
+    "@backstage-community/plugin-catalog-backend-module-keycloak": "npm:^3.12.2"
     "@backstage/backend-common": "npm:^0.25.0"
     "@backstage/backend-plugin-api": "backstage:^"
     "@backstage/backend-test-utils": "backstage:^"
@@ -8345,14 +8347,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@keycloak/keycloak-admin-client@npm:26.1.4":
-  version: 26.1.4
-  resolution: "@keycloak/keycloak-admin-client@npm:26.1.4"
+"@keycloak/keycloak-admin-client@npm:26.3.1":
+  version: 26.3.1
+  resolution: "@keycloak/keycloak-admin-client@npm:26.3.1"
   dependencies:
     camelize-ts: "npm:^3.0.0"
     url-join: "npm:^5.0.0"
     url-template: "npm:^3.1.1"
-  checksum: 10c0/672c64e6b5a2ac1aca24a3f6bfe413f9a485766ded7f56d64bfc542d978ae763ab376ad53c3ef4a183413a454959b9d0ca88e49fa9d7956554b03b67153d9879
+  checksum: 10c0/affc473030da1c4da5a44d18978e32f18bae83d833d783268c06a1821c69c8f965de5feabb7313effb5182588ce85ffa9ff165c918d90237bcb2bf489863c18e
   languageName: node
   linkType: hard
 
@@ -17065,9 +17067,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "app@workspace:packages/app"
   dependencies:
-    "@backstage-community/plugin-github-actions": "npm:^0.13.0"
+    "@backstage-community/plugin-github-actions": "npm:^0.13.1"
     "@backstage-community/plugin-github-pull-requests-board": "npm:^0.8.0"
-    "@backstage-community/plugin-todo": "npm:^0.11.0"
+    "@backstage-community/plugin-todo": "npm:^0.11.1"
     "@backstage/app-defaults": "backstage:^"
     "@backstage/catalog-model": "backstage:^"
     "@backstage/cli": "backstage:^"
@@ -17743,7 +17745,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "backend@workspace:packages/backend"
   dependencies:
-    "@backstage-community/plugin-catalog-backend-module-keycloak": "npm:^3.12.1"
+    "@backstage-community/plugin-catalog-backend-module-keycloak": "npm:^3.12.2"
     "@backstage-community/plugin-todo-backend": "npm:^0.12.0"
     "@backstage/backend-defaults": "backstage:^"
     "@backstage/backend-plugin-api": "backstage:^"

@@ -1,0 +1,13 @@
+diff --git a/dist/playwright.cjs.js b/dist/playwright.cjs.js
+index c89c0d982319b8fbc8b6c27814e14d373c5a1e2e..1e69eac0c07472dd3a396aca88a8574a415b2ecd 100644
+--- a/dist/playwright.cjs.js
++++ b/dist/playwright.cjs.js
+@@ -20,7 +20,7 @@ function generateProjects() {
+     name: pkg.packageJson.name,
+     testDir: path.resolve(pkg.dir, "e2e-tests"),
+     use: {
+-      channel: "chrome"
++      channel: "chromium"
+     }
+   }));
+ }

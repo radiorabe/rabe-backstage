@@ -1676,18 +1676,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage-community/plugin-github-actions@npm:^0.14.0":
-  version: 0.14.0
-  resolution: "@backstage-community/plugin-github-actions@npm:0.14.0"
+"@backstage-community/plugin-github-actions@npm:^0.15.0":
+  version: 0.15.0
+  resolution: "@backstage-community/plugin-github-actions@npm:0.15.0"
   dependencies:
     "@backstage/catalog-model": "npm:^1.7.5"
-    "@backstage/core-compat-api": "npm:^0.5.1"
-    "@backstage/core-components": "npm:^0.17.5"
-    "@backstage/core-plugin-api": "npm:^1.10.9"
-    "@backstage/frontend-plugin-api": "npm:^0.11.0"
-    "@backstage/integration": "npm:^1.17.1"
-    "@backstage/integration-react": "npm:^1.2.9"
-    "@backstage/plugin-catalog-react": "npm:^1.20.1"
+    "@backstage/core-compat-api": "npm:^0.5.2"
+    "@backstage/core-components": "npm:^0.18.1"
+    "@backstage/core-plugin-api": "npm:^1.11.0"
+    "@backstage/frontend-plugin-api": "npm:^0.12.0"
+    "@backstage/integration": "npm:^1.18.0"
+    "@backstage/integration-react": "npm:^1.2.10"
+    "@backstage/plugin-catalog-react": "npm:^1.21.1"
     "@material-ui/core": "npm:^4.12.2"
     "@material-ui/icons": "npm:^4.9.1"
     "@material-ui/lab": "npm:4.0.0-alpha.61"
@@ -1700,7 +1700,7 @@ __metadata:
     react: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-dom: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-router-dom: 6.0.0-beta.0 || ^6.3.0
-  checksum: 10c0/7b00fd1a07aacfc2f8d9fca44d390e35b92bef462cf925028160ba2be848c5bf62d928feb9fe57728df01e09a2521f3427bc0bb3c77dcba948731773d353946c
+  checksum: 10c0/3482b53d842b87b2bc5a7963a9a36abdf9c35cb863a2d3a1cb72eac2e595b5ee86a7f188481b7c47b424cac60d867fd1c52419ef99cd77b55acd6bfb69a16806
   languageName: node
   linkType: hard
 
@@ -15013,7 +15013,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "app@workspace:packages/app"
   dependencies:
-    "@backstage-community/plugin-github-actions": "npm:^0.14.0"
+    "@backstage-community/plugin-github-actions": "npm:^0.15.0"
     "@backstage-community/plugin-github-pull-requests-board": "npm:^0.10.0"
     "@backstage-community/plugin-todo": "npm:^0.12.0"
     "@backstage/app-defaults": "backstage:^"

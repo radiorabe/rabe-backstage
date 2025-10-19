@@ -115,8 +115,11 @@ RUN YARN_ENABLE_SCRIPTS=false yarn workspaces focus --all --production && rm -rf
 # Copy binary modules from build stage where we have proper toolchains
 COPY --from=build --chown=1001:0 /opt/app-root/src/node_modules/isolated-vm    ./node_modules/isolated-vm
 COPY --from=build --chown=1001:0 /opt/app-root/src/node_modules/ssh2           ./node_modules/ssh2
-COPY --from=build --chown=1001:0 /opt/app-root/src/node_modules/better-sqlite3 ./node_modules/better-sqlite3
 COPY --from=build --chown=1001:0 /opt/app-root/src/node_modules/cpu-features   ./node_modules/cpu-features
+
+# Copy built module to image and submodule search path for https://github.com/radiorabe/rabe-backstage/issues/834
+COPY --from=build --chown=1001:0 /opt/app-root/src/node_modules/better-sqlite3               ./node_modules/better-sqlite3
+COPY --from=build --chown=1001:0 /opt/app-root/src/node_modules/better-sqlite3/build/Release ./node_modules/@backstage/backend-defaults/node_modules/better-sqlite3/Release
 
 # Copy the built packages from the build stage
 COPY --from=build /opt/app-root/src/packages/backend/dist/bundle.tar.gz .

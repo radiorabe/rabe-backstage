@@ -52,7 +52,7 @@
     "@backstage/plugin-techdocs-backend": "backstage:^",
     "@internal/backstage-plugin-catalog-backend-module-transformer": "workspace:^",
     "@internal/backstage-plugin-permission-backend-module-rabe": "workspace:^",
-    "@roadiehq/scaffolder-backend-module-http-request": "^5.4.2",
+    "@roadiehq/scaffolder-backend-module-http-request": "^5.5.1",
     "app": "link:../app",
     "better-sqlite3": "^12.4.1",
     "dockerode": "^4.0.9",

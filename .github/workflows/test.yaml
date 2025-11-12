@@ -5,7 +5,7 @@ on:
 
 jobs:
   pre-commit:
-    uses: radiorabe/actions/.github/workflows/test-pre-commit.yaml@v0.37.0
+    uses: radiorabe/actions/.github/workflows/test-pre-commit.yaml@v0.38.0
   test-yarn:
     runs-on: ubuntu-latest
     permissions:

@@ -1,35 +1,12 @@
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: github-actions
+    directory: /
     schedule:
-      interval: "daily"
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    open-pull-requests-limit: 10
+      interval: daily
+    commit-message:
+      prefix: "chore(ci): "
     groups:
-      backstage:
-        patterns:
-          - "@backstage/*"
-          - "@backstage-community/*"
-          - "@roadiehq/*"
-          - "@janus-idp/*"
-      types-react:
-        patterns:
-          - "@types/react*"
-      react:
-        patterns:
-          - "react*"
-      babel:
-        patterns:
-          - "@babel/*"
-  - package-ecosystem: "docker"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    groups:
-      baseimages:
+      actions:
         patterns:
           - "*"

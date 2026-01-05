@@ -1,5 +1,26 @@
 version: 2
 updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+    groups:
+      backstage:
+        patterns:
+          - "@backstage/*"
+          - "@backstage-community/*"
+          - "@roadiehq/*"
+          - "@janus-idp/*"
+      types-react:
+        patterns:
+          - "@types/react*"
+      react:
+        patterns:
+          - "react*"
+      babel:
+        patterns:
+          - "@babel/*"
   - package-ecosystem: github-actions
     directory: /
     schedule:

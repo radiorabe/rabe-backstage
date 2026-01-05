@@ -1,9 +1,13 @@
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
+  - package-ecosystem: "docker"
     directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      baseimages:
+        patterns:
+          - "*"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
@@ -25,11 +29,13 @@ updates:
       babel:
         patterns:
           - "@babel/*"
-  - package-ecosystem: "docker"
-    directory: "/"
+  - package-ecosystem: github-actions
+    directory: /
     schedule:
-      interval: "daily"
+      interval: daily
+    commit-message:
+      prefix: "chore(ci): "
     groups:
-      baseimages:
+      actions:
         patterns:
           - "*"

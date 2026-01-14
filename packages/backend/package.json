@@ -63,7 +63,7 @@
   },
   "devDependencies": {
     "@backstage/cli": "backstage:^",
-    "@types/dockerode": "^3",
+    "@types/dockerode": "^4",
     "@types/luxon": "^3"
   },
   "files": [

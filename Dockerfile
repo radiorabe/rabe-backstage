@@ -1,5 +1,5 @@
 # Stage 1 - Install dependencies
-FROM registry.access.redhat.com/ubi9/nodejs-22:latest AS deps
+FROM registry.access.redhat.com/ubi9/nodejs-24:latest AS deps
 USER 0
 
 # Install yarn and libs for building isolated-vm with node-gyp
@@ -19,7 +19,7 @@ RUN yarn install --immutable --network-timeout 600000
 RUN chown 1001:0 ".yarn/install-state.gz"
 
 # Stage 2 - Build packages
-FROM registry.access.redhat.com/ubi9/nodejs-22:latest AS build
+FROM registry.access.redhat.com/ubi9/nodejs-24:latest AS build
 USER 0
 
 # Install yarn
@@ -41,7 +41,7 @@ ENV APP_ROOT=/opt/app-root \
     HOME=/opt/app-root/src \
     NPM_RUN=start \
     PLATFORM="el9" \
-    NODEJS_VERSION=22 \
+    NODEJS_VERSION=24 \
     NPM_RUN=start \
     NAME=backstage
 

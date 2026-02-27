@@ -20,6 +20,6 @@ test('App should render the sign-in screen', async ({ page }) => {
 
   await expect(page.getByText('RaBe Backstage')).toBeVisible();
 
-  const enterButton = page.getByRole('button', { name: 'Sign In' });
-  await expect(enterButton).toBeVisible();
+  const signInButton = page.getByRole('button', { name: 'Sign In' });
+  await expect(signInButton).toBeVisible();
 });

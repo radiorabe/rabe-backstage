@@ -15,7 +15,7 @@
  */
 import { test, expect } from '@playwright/test';
 
-test('App should render the welcome page', async ({ page }) => {
+test('App should render the sign-in screen', async ({ page }) => {
   await page.goto('/');
 
   await expect(page.getByText('RaBe Backstage')).toBeVisible();

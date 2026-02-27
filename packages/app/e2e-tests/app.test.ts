@@ -18,7 +18,7 @@ import { test, expect } from '@playwright/test';
 test('App should render the sign-in screen', async ({ page }) => {
   await page.goto('/');
 
-  await expect(page.getByText('RaBe Backstage')).toBeVisible();
+  await expect(page).toHaveTitle(/RaBe Backstage/);
 
   const signInButton = page.getByRole('button', { name: 'Sign In' });
   await expect(signInButton).toBeVisible();

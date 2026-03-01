@@ -1,4 +1,4 @@
-# RaBe Backstage – Copilot Instructions
+# RaBe Backstage
 
 This is the [Backstage](https://backstage.io/) instance for Radio Bern RaBe.
 It contains catalog, TechDocs, and RaBe SSO integration via Keycloak OIDC.

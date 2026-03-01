@@ -59,7 +59,7 @@ npx playwright test
 
 - **Language**: TypeScript throughout; follow existing patterns in each package
 - **License**: GNU AGPL-3.0-only — include the SPDX identifier in new files where applicable
-- **Formatting**: Prettier (config from `@backstage/cli/config/prettier`); run `prettier --write .` or let `lint-staged` handle it
+- **Formatting**: [Prettier](https://prettier.io/) (see <https://prettier.io/llms.txt>; config from `@backstage/cli/config/prettier`); run `prettier --write .` or let `lint-staged` handle it
 - **Linting**: ESLint with Backstage's default config (`.eslintrc.js`)
 - **Commits**: Follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
   - `fix:` → PATCH release

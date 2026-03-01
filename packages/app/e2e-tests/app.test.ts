@@ -22,4 +22,6 @@ test('App should render the sign-in screen', async ({ page }) => {
 
   const signInButton = page.getByRole('button', { name: 'Sign In' });
   await expect(signInButton).toBeVisible();
+
+  await expect(page).toHaveScreenshot('login-page.png');
 });

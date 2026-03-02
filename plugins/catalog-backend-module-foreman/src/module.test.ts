@@ -1,4 +1,4 @@
-import catalogModuleForeman from './index';
+import { catalogModuleForeman } from './module';
 import { ConfigReader } from '@backstage/config';
 
 // We'll reproduce the minimal portion of the backend-plugin-api that we
@@ -15,23 +15,19 @@ describe('catalogModuleForeman', () => {
 
     const rootConfig = ConfigReader.fromConfigs([]);
 
-    // the default export should itself be the module object
+    // the imported module object should be defined
     expect(catalogModuleForeman).toBeDefined();
 
-    // Capture the init function via the public register API instead of using
-    // internal getRegistrations.
-    const initFns: Array<(deps: any) => unknown> = [];
-    (catalogModuleForeman as any).register({
-      registerInit({ init }: { init: (deps: any) => unknown }) {
-        initFns.push(init);
-      },
-    } as any);
+    // The backend feature object exposes a getRegistrations method which
+    // runs the registration callback and returns the collected registrations.
+    const regs: any[] = (catalogModuleForeman as any).getRegistrations();
+    expect(Array.isArray(regs)).toBe(true);
+    expect(regs).toHaveLength(1);
 
-    expect(initFns).toHaveLength(1);
-    const initFn = initFns[0];
+    const initFn = regs[0].init.func;
     expect(typeof initFn).toBe('function');
 
-    // invoke the init function directly as the framework would
+    // invoke the init function as the backend would
     await initFn({ catalog, logger, scheduler, config: rootConfig });
 
     // nothing should have been added, but a warning logged

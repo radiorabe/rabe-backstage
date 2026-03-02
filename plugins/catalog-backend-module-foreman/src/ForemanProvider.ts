@@ -119,42 +119,42 @@ export class ForemanProvider implements EntityProvider {
 
     const resourceEntities: Entity[] = [];
     for (const item of data.results) {
-        const base = apiBase; // computed above
-        const links = [
-            {
-                url: `${base}/new/hosts/${item.name}`,
-                title: 'Foreman',
-                icon: 'foreman',
-            }
-        ];
-        if (item.cockpit_url) {
-            links.push({
-                url: `${base}${item.cockpit_url}`,
-                title: 'Cockpit',
-                icon: 'cockpit',
-            });
+      const base = apiBase; // computed above
+      const links = [
+        {
+          url: `${base}/new/hosts/${item.name}`,
+          title: 'Foreman',
+          icon: 'foreman',
         }
-        const entity: ResourceEntity = {
-            apiVersion: 'backstage.io/v1alpha1',
-            kind: 'Resource',
-            metadata: {
-                name: item.name,
-                namespace: this.namespace,
-                title: item.name.split('.')[0],
-                description: item.comment || `Host ${item.name} managed in Foreman`,
-                annotations: {
-                    'foreman-id': item.id.toString(),
-                    'backstage.io/managed-by-location': `foreman-provider:${this.baseUrl}`,
-                    'backstage.io/managed-by-origin-location': `foreman-provider:${this.baseUrl}`,
-                },
-                links: links
-            },
-            spec: {
-                type: 'host',
-                owner: this.owner,
-            },
-        };
-        resourceEntities.push(entity);
+      ];
+      if (item.cockpit_url) {
+        links.push({
+          url: `${base}${item.cockpit_url}`,
+          title: 'Cockpit',
+          icon: 'cockpit',
+        });
+      }
+      const entity: ResourceEntity = {
+        apiVersion: 'backstage.io/v1alpha1',
+        kind: 'Resource',
+        metadata: {
+          name: item.name,
+          namespace: this.namespace,
+          title: item.name.split('.')[0],
+          description: item.comment || `Host ${item.name} managed in Foreman`,
+          annotations: {
+            'foreman-id': item.id.toString(),
+            'backstage.io/managed-by-location': `foreman-provider:${this.baseUrl}`,
+            'backstage.io/managed-by-origin-location': `foreman-provider:${this.baseUrl}`,
+          },
+          links: links
+        },
+        spec: {
+          type: 'host',
+          owner: this.owner,
+        },
+      };
+      resourceEntities.push(entity);
     }
 
     try {

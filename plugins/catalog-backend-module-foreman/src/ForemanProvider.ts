@@ -43,12 +43,15 @@ export class ForemanProvider implements EntityProvider {
     // allow either `user`/`token` or `accessId`/`accessToken` pairs
     this.foremanUser =
       config.getOptionalString('user') ?? config.getOptionalString('accessId') ?? '';
-    this.foremanToken =
-      config.getOptionalString('token') ?? config.getOptionalString('accessToken')!;
-    if (!this.foremanToken) {
+    const foremanToken =
+      config.getOptionalString('token') ??
+      config.getOptionalString('accessToken');
+
+    if (!foremanToken) {
       throw new Error('Foreman provider requires a token');
     }
 
+    this.foremanToken = foremanToken;
     // metadata defaults can be overridden via configuration
     this.namespace = config.getOptionalString('namespace') ?? 'default';
     this.owner = config.getOptionalString('owner') ?? 'it-reaktion';

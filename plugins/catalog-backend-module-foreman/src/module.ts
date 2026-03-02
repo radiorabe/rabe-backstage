@@ -33,11 +33,15 @@ export const catalogModuleForeman = createBackendModule({
         // or fall back to sensible defaults otherwise.
         const scheduleCfg =
           foremanConfig.getOptionalConfig('schedule');
-        const frequency =
+        // configuration API is loose with JSON values, but the scheduler
+        // types are strict.  Cast to `any` here so that TypeScript will
+        // accept whatever the user happened to put in the config, with a
+        // fallback to our sane defaults.
+        const frequency: any =
           scheduleCfg?.getOptional('frequency') ?? { minutes: 30 };
-        const timeout =
+        const timeout: any =
           scheduleCfg?.getOptional('timeout') ?? { minutes: 1 };
-        const initialDelay = scheduleCfg?.getOptional('initialDelay');
+        const initialDelay: any = scheduleCfg?.getOptional('initialDelay');
         const taskRunner = scheduler.createScheduledTaskRunner({
           frequency,
           timeout,

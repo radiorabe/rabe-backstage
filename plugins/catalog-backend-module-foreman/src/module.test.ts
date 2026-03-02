@@ -17,14 +17,18 @@ describe('catalogModuleForeman', () => {
 
     // the default export should itself be the module object
     expect(catalogModuleForeman).toBeDefined();
-    const regs = (catalogModuleForeman as any).getRegistrations?.();
-    expect(Array.isArray(regs)).toBe(true);
-    expect(regs).toHaveLength(1);
 
-    // each registration entry contains an init object with deps and func
-    const entry: any = regs[0];
-    expect(entry.init).toBeDefined();
-    const initFn = entry.init.func;
+    // Capture the init function via the public register API instead of using
+    // internal getRegistrations.
+    const initFns: Array<(deps: any) => unknown> = [];
+    (catalogModuleForeman as any).register({
+      registerInit({ init }: { init: (deps: any) => unknown }) {
+        initFns.push(init);
+      },
+    } as any);
+
+    expect(initFns).toHaveLength(1);
+    const initFn = initFns[0];
     expect(typeof initFn).toBe('function');
 
     // invoke the init function directly as the framework would

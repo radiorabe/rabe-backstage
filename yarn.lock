@@ -3711,25 +3711,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/plugin-catalog-node@npm:^1.20.1":
-  version: 1.20.1
-  resolution: "@backstage/plugin-catalog-node@npm:1.20.1"
-  dependencies:
-    "@backstage/backend-plugin-api": "npm:^1.6.0"
-    "@backstage/catalog-client": "npm:^1.12.1"
-    "@backstage/catalog-model": "npm:^1.7.6"
-    "@backstage/errors": "npm:^1.2.7"
-    "@backstage/plugin-catalog-common": "npm:^1.1.7"
-    "@backstage/plugin-permission-common": "npm:^0.9.3"
-    "@backstage/plugin-permission-node": "npm:^0.10.7"
-    "@backstage/types": "npm:^1.2.2"
-    lodash: "npm:^4.17.21"
-    yaml: "npm:^2.0.0"
-  checksum: 10c0/820e84dbc072e83eac57173702baa50b373e17665997c148dcb8e61a499145d023209ad5a100c61d1a877eef4e847956dc88de113fd45a6566be508a5533d9b5
-  languageName: node
-  linkType: hard
-
-"@backstage/plugin-catalog-node@npm:^2.0.0":
+"@backstage/plugin-catalog-node@backstage:^::backstage=1.48.3&npm=2.0.0, @backstage/plugin-catalog-node@npm:^2.0.0":
   version: 2.0.0
   resolution: "@backstage/plugin-catalog-node@npm:2.0.0"
   dependencies:
@@ -3749,6 +3731,24 @@ __metadata:
     "@backstage/backend-test-utils":
       optional: true
   checksum: 10c0/dd418541e19f234987258d3688c98847d9c5d1256aa1ab1c5df49715c4a5c44e76f87eea9d802b2dc2a219e94681ecf76c2c379862e1f96ffa9fd84af2dcd6be
+  languageName: node
+  linkType: hard
+
+"@backstage/plugin-catalog-node@npm:^1.20.1":
+  version: 1.20.1
+  resolution: "@backstage/plugin-catalog-node@npm:1.20.1"
+  dependencies:
+    "@backstage/backend-plugin-api": "npm:^1.6.0"
+    "@backstage/catalog-client": "npm:^1.12.1"
+    "@backstage/catalog-model": "npm:^1.7.6"
+    "@backstage/errors": "npm:^1.2.7"
+    "@backstage/plugin-catalog-common": "npm:^1.1.7"
+    "@backstage/plugin-permission-common": "npm:^0.9.3"
+    "@backstage/plugin-permission-node": "npm:^0.10.7"
+    "@backstage/types": "npm:^1.2.2"
+    lodash: "npm:^4.17.21"
+    yaml: "npm:^2.0.0"
+  checksum: 10c0/820e84dbc072e83eac57173702baa50b373e17665997c148dcb8e61a499145d023209ad5a100c61d1a877eef4e847956dc88de113fd45a6566be508a5533d9b5
   languageName: node
   linkType: hard
 
@@ -7091,6 +7091,20 @@ __metadata:
   checksum: 10c0/414a3a2a9733459c57452d84ef19ff002222303d19041580685681153132d2a30af8f90f269b3967c30c670fa689dbb7d4fc25a86dc66f029eebe90dc7467b0a
   languageName: node
   linkType: hard
+
+"@internal/backstage-plugin-catalog-backend-module-foreman@workspace:^, @internal/backstage-plugin-catalog-backend-module-foreman@workspace:plugins/catalog-backend-module-foreman":
+  version: 0.0.0-use.local
+  resolution: "@internal/backstage-plugin-catalog-backend-module-foreman@workspace:plugins/catalog-backend-module-foreman"
+  dependencies:
+    "@backstage/backend-plugin-api": "backstage:^"
+    "@backstage/backend-test-utils": "backstage:^"
+    "@backstage/catalog-model": "backstage:^"
+    "@backstage/cli": "backstage:^"
+    "@backstage/config": "backstage:^"
+    "@backstage/plugin-catalog-node": "backstage:^"
+    axios: "npm:^1.0.0"
+  languageName: unknown
+  linkType: soft
 
 "@internal/backstage-plugin-catalog-backend-module-transformer@workspace:^, @internal/backstage-plugin-catalog-backend-module-transformer@workspace:plugins/catalog-backend-module-transformer":
   version: 0.0.0-use.local
@@ -16493,6 +16507,7 @@ __metadata:
     "@backstage/plugin-search-backend-node": "backstage:^"
     "@backstage/plugin-signals-backend": "backstage:^"
     "@backstage/plugin-techdocs-backend": "backstage:^"
+    "@internal/backstage-plugin-catalog-backend-module-foreman": "workspace:^"
     "@internal/backstage-plugin-catalog-backend-module-transformer": "workspace:^"
     "@internal/backstage-plugin-permission-backend-module-rabe": "workspace:^"
     "@roadiehq/scaffolder-backend-module-http-request": "npm:^5.5.1"

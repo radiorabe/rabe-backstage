@@ -33,9 +33,15 @@ export const catalogModuleForeman = createBackendModule({
         // or fall back to sensible defaults otherwise.
         const scheduleCfg =
           foremanConfig.getOptionalConfig('schedule');
+        const frequency =
+          scheduleCfg?.getOptional('frequency') ?? { minutes: 30 };
+        const timeout =
+          scheduleCfg?.getOptional('timeout') ?? { minutes: 1 };
+        const initialDelay = scheduleCfg?.getOptional('initialDelay');
         const taskRunner = scheduler.createScheduledTaskRunner({
-          frequency: scheduleCfg?.get('frequency') ?? { minutes: 30 },
-          timeout: scheduleCfg?.get('timeout') ?? { minutes: 1 },
+          frequency,
+          timeout,
+          initialDelay,
         });
 
         const foreman = new ForemanProvider(foremanConfig, logger, taskRunner);

@@ -20,7 +20,7 @@ purpose of the code, how to keep it in shape, and what to do when Backstage or F
     and entity creation; supports both basic auth (`user`/`token`) and bearer token flows)
   - `src/module.ts` – module registration and wiring, reads `backendConfig.getConfig('catalog.plugins.foreman')`
   - `src/index.ts` – package entrypoint
-  - `src/ForemanProvider.test.ts` – (planned) unit tests for the provider logic
+  - `src/ForemanProvider.test.ts` – unit tests for the provider logic
 
 
 Because of its small size and narrow scope the module is otherwise unopinionated and has no external

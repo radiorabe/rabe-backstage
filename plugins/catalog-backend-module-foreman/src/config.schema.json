@@ -24,6 +24,10 @@
       "additionalProperties": true
     }
   },
-  "required": ["url", "token"],
+  "required": ["url"],
+  "anyOf": [
+    { "required": ["token"] },
+    { "required": ["accessToken"] }
+  ],
   "additionalProperties": false
 }

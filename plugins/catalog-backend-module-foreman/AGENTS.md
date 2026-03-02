@@ -11,14 +11,14 @@ purpose of the code, how to keep it in shape, and what to do when Backstage or F
 - **Role:** a _backend-plugin-module_ for `catalog` that provides `Resource` entities representing hosts
   created in a Foreman instance.
 - **Current behaviour:** the `ForemanProvider` is scheduled via the framework's
-  `SchedulerServiceTaskRunner` and executes once per minute (configurable through the
+  `SchedulerServiceTaskRunner` and executes every 30 minutes by default (configurable through the
   scheduler service). It fetches `/api/hosts?per_page=all` from the configured Foreman
   instance, transforms every host into a `Resource` entity, and applies a full mutation to the catalog.
 
 - **Key files:**
   - `src/ForemanProvider.ts` – provider implementation (includes auth logic, config parsing,
     and entity creation; supports both basic auth (`user`/`token`) and bearer token flows)
-  - `src/module.ts` – module registration and wiring, reads `backendConfig.getConfig('catalog.plugins.foreman')`
+  - `src/module.ts` – module registration and wiring, reads `backendConfig.getConfig('catalog.providers.foreman')`
   - `src/index.ts` – package entrypoint
   - `src/ForemanProvider.test.ts` – unit tests for the provider logic
 

@@ -1,4 +1,3 @@
-/***/
 /**
  * The foreman backend module for the catalog plugin.
  *

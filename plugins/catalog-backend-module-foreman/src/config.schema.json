@@ -7,27 +7,64 @@
       "type": "string",
       "description": "Base URL of the Foreman instance (e.g. https://foreman.example.com)"
     },
-    "user": { "type": "string" },
-    "accessId": { "type": "string" },
-    "token": { "type": "string" },
-    "accessToken": { "type": "string" },
-    "namespace": { "type": "string" },
-    "owner": { "type": "string" },
+    "user": {
+      "type": "string"
+    },
+    "accessId": {
+      "type": "string"
+    },
+    "token": {
+      "type": "string"
+    },
+    "accessToken": {
+      "type": "string"
+    },
+    "namespace": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
     "schedule": {
       "type": "object",
       "description": "Optional scheduler configuration.  See scheduler service docs for supported fields.",
       "properties": {
-        "frequency": { "type": ["string", "object"] },
-        "timeout": { "type": ["string", "object"] },
-        "initialDelay": { "type": ["string", "object"] }
+        "frequency": {
+          "type": [
+            "string",
+            "object"
+          ]
+        },
+        "timeout": {
+          "type": [
+            "string",
+            "object"
+          ]
+        },
+        "initialDelay": {
+          "type": [
+            "string",
+            "object"
+          ]
+        }
       },
       "additionalProperties": true
     }
   },
-  "required": ["url"],
+  "required": [
+    "url"
+  ],
   "anyOf": [
-    { "required": ["token"] },
-    { "required": ["accessToken"] }
+    {
+      "required": [
+        "token"
+      ]
+    },
+    {
+      "required": [
+        "accessToken"
+      ]
+    }
   ],
   "additionalProperties": false
 }

@@ -5,6 +5,7 @@ const backend = createBackend();
 backend.add(import('@backstage/plugin-app-backend'));
 backend.add(import('@backstage/plugin-proxy-backend'))
 backend.add(import('@backstage/plugin-techdocs-backend'));
+backend.add(import('@internal/backstage-plugin-techdocs-backend-module-ghpages'));
 backend.add(import('@backstage/plugin-scaffolder-backend'));
 backend.add(import('@backstage/plugin-scaffolder-backend-module-github'));
 backend.add(

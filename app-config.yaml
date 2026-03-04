@@ -47,15 +47,16 @@ proxy:
       target: 'https://api.github.com'
 
 # Reference documentation http://backstage.io/docs/features/techdocs/configuration
-# Note: After experimenting with basic setup, use CI/CD to generate docs
-# and an external cloud storage when deploying TechDocs for production use-case.
-# https://backstage.io/docs/features/techdocs/how-to-guides#how-to-migrate-from-techdocs-basic-to-recommended-deployment-approach
+# Docs are pre-built and deployed to GitHub Pages externally; Backstage
+# only reads (and indexes for search) from there.
+# See plugins/techdocs-backend-module-ghpages/README.md for the required
+# GitHub Actions workflow that repositories must add.
 techdocs:
-  builder: "local" # Alternatives - 'external'
-  generator:
-    runIn: "local" # Alternatives - 'local'
+  builder: "external"
   publisher:
-    type: "local" # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
+    type: "githubPages"
+    githubPages:
+      baseUrl: "https://radiorabe.github.io"
 
 auth:
   # see https://backstage.io/docs/auth/ to learn about auth providers

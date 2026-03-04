@@ -29,6 +29,7 @@ backend.add(
   import('@backstage-community/plugin-catalog-backend-module-keycloak'),
 );
 backend.add(import('@backstage/plugin-catalog-backend-module-github'));
+backend.add(import('@internal/backstage-plugin-catalog-backend-module-foreman'))
 backend.add(import('@internal/backstage-plugin-catalog-backend-module-transformer'))
 
 // permission plugin

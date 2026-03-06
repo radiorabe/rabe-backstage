@@ -42,6 +42,8 @@ plugins:
 
 nav:
   - README: index.md
+  - TechDocs GitHub Pages: techdocs.md
 
 watch:
   - README.md
+  - docs/

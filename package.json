@@ -32,7 +32,7 @@
   "devDependencies": {
     "@backstage/cli": "backstage:^",
     "@backstage/e2e-test-utils": "backstage:^",
-    "@jest/environment-jsdom-abstract": "^30.0.0",
+    "@jest/environment-jsdom-abstract": "^30.3.0",
     "@playwright/test": "^1.58.2",
     "@types/jest": "^30.0.0",
     "@types/react": "^18",

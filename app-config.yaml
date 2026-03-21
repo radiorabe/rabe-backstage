@@ -67,12 +67,20 @@ techdocs:
 
 auth:
   # see https://backstage.io/docs/auth/ to learn about auth providers
-  environment: production
+  environment: development
   ### Providing an auth.session.secret will enable session support in the auth-backend
   session:
     secret: ${SESSION_SECRET}
   providers:
     oidc:
+      development:
+        prompt: auto
+        metadataUrl: ${AUTH_KEYCLOAK_METADATA_URL}
+        clientId: ${AUTH_KEYCLOAK_CLIENT_ID}
+        clientSecret: ${AUTH_KEYCLOAK_CLIENT_SECRET}
+        signIn:
+          resolvers:
+            - resolver: emailMatchingUserEntityProfileEmail
       production:
         prompt: auto
         metadataUrl: ${AUTH_KEYCLOAK_METADATA_URL}
@@ -82,6 +90,9 @@ auth:
           resolvers:
             - resolver: emailMatchingUserEntityProfileEmail
     github:
+      development:
+        clientId: ${AUTH_GITHUB_CLIENT_ID}
+        clientSecret: ${AUTH_GITHUB_CLIENT_SECRET}
       production:
         clientId: ${AUTH_GITHUB_CLIENT_ID}
         clientSecret: ${AUTH_GITHUB_CLIENT_SECRET}

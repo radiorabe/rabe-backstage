@@ -19,6 +19,7 @@
     "@backstage-community/plugin-github-pull-requests-board": "^0.15.1",
     "@backstage-community/plugin-todo": "^0.17.1",
     "@backstage/cli": "backstage:^",
+    "@backstage/core-app-api": "backstage:^",
     "@backstage/core-components": "backstage:^",
     "@backstage/core-plugin-api": "backstage:^",
     "@backstage/frontend-defaults": "backstage:^",

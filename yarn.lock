@@ -2575,7 +2575,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/core-app-api@npm:^1.19.4, @backstage/core-app-api@npm:^1.19.6":
+"@backstage/core-app-api@backstage:^::backstage=1.49.1&npm=1.19.6, @backstage/core-app-api@npm:^1.19.4, @backstage/core-app-api@npm:^1.19.6":
   version: 1.19.6
   resolution: "@backstage/core-app-api@npm:1.19.6"
   dependencies:
@@ -15425,6 +15425,7 @@ __metadata:
     "@backstage-community/plugin-github-pull-requests-board": "npm:^0.15.1"
     "@backstage-community/plugin-todo": "npm:^0.17.1"
     "@backstage/cli": "backstage:^"
+    "@backstage/core-app-api": "backstage:^"
     "@backstage/core-components": "backstage:^"
     "@backstage/core-plugin-api": "backstage:^"
     "@backstage/frontend-defaults": "backstage:^"

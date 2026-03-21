@@ -55,6 +55,33 @@ npx playwright install --with-deps chromium
 npx playwright test
 ```
 
+## Authentication
+
+Sign-in is handled by `packages/app/src/modules/auth/`. The module registers:
+
+- An OIDC (`OAuth2`) API pointing at the Keycloak backend provider — always present in all environments.
+- A custom `SignInPage` (via `SignInPageBlueprint`) that shows the **RaBe SSO** card and, conditionally, a **Guest** card.
+
+Guest access is controlled by the existing `auth.environment` config key (no extra keys needed):
+
+| Config file | `auth.environment` | Guest shown? |
+|---|---|---|
+| `app-config.yaml` | `development` | ✓ (dev & CI) |
+| `app-config.production.yaml` | `production` | ✗ |
+
+## Playwright e2e tests
+
+Tests run against a frontend-only server (`yarn start app`, port 3000) — no backend is started. Four tests with named snapshots in `packages/app/e2e-tests/app.test.ts-snapshots/`:
+
+| Test | What it checks | Snapshot |
+|---|---|---|
+| Sign-in screen | OIDC "Sign In" + Guest "Enter" visible | `login-page.png` |
+| OIDC auth error | popup closed → "Login failed, popup was closed" | `login-auth-error.png` |
+| Guest → catalog | catalog heading visible after guest sign-in | `catalog-page.png` |
+| Guest → settings | settings page accessible after sign-in | `settings-page.png` |
+
+Because no backend runs during Playwright tests, catalog entity/kind fetch errors appear as inline `[role="alert"]` banners. These are masked in the `catalog-page.png` snapshot and dismissed (where they appear as `alertdialog`) before screenshotting.
+
 ## Code Standards
 
 - **Language**: TypeScript throughout; follow existing patterns in each package

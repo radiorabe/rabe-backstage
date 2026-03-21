@@ -105,7 +105,7 @@ WORKDIR "$HOME"
 USER 1001
 
 # Copy the install dependencies from the build stage and context
-COPY --from=build /opt/app-root/src/.yarn ./.yarn
+COPY --chown=1001:0 --from=build /opt/app-root/src/.yarn ./.yarn
 COPY --from=build /opt/app-root/src/backstage.json /opt/app-root/src/package.json /opt/app-root/src/yarn.lock /opt/app-root/src/.yarnrc.yml /opt/app-root/src/packages/backend/dist/skeleton.tar.gz ./
 RUN tar xzf skeleton.tar.gz && rm skeleton.tar.gz
 

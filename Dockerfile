@@ -79,7 +79,6 @@ RUN    microdnf -y module disable nodejs \
          python3.11-pip \
          shadow-utils \
          tar \
-         yarnpkg \
     && ln /usr/bin/python3.11 /usr/bin/python \
     && ln /usr/bin/pydoc3.11 /usr/bin/pydoc \
     && ln /usr/bin/pip3.11 /usr/bin/pip \
@@ -111,7 +110,9 @@ COPY --from=build /opt/app-root/src/backstage.json /opt/app-root/src/package.jso
 RUN tar xzf skeleton.tar.gz && rm skeleton.tar.gz
 
 # Install production dependencies, ignoring scripts so we don't need a node-gyp toolchain to rebuild binary modules
-RUN YARN_ENABLE_SCRIPTS=false yarn workspaces focus --all --production && rm -rf "$(yarn cache clean)"
+RUN YARN=$(sed -n 's/^yarnPath: //p' .yarnrc.yml) \
+    && YARN_ENABLE_SCRIPTS=false node "$YARN" workspaces focus --all --production \
+    && node "$YARN" cache clean
 # Copy binary modules from build stage where we have proper toolchains
 COPY --from=build --chown=1001:0 /opt/app-root/src/node_modules/isolated-vm    ./node_modules/isolated-vm
 COPY --from=build --chown=1001:0 /opt/app-root/src/node_modules/ssh2           ./node_modules/ssh2

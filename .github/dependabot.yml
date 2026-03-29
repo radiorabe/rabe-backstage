@@ -8,6 +8,8 @@ updates:
       baseimages:
         patterns:
           - "*"
+    cooldown:
+      default-days: 7
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
@@ -29,6 +31,8 @@ updates:
       babel:
         patterns:
           - "@babel/*"
+    cooldown:
+      default-days: 7
   - package-ecosystem: github-actions
     directory: /
     schedule:
@@ -39,3 +43,5 @@ updates:
       actions:
         patterns:
           - "*"
+    cooldown:
+      default-days: 7

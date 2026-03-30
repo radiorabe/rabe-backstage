@@ -3338,8 +3338,8 @@ __metadata:
   linkType: hard
 
 "@backstage/plugin-auth-backend@backstage:^::backstage=1.49.1&npm=0.27.2, @backstage/plugin-auth-backend@npm:^0.27.2":
-  version: 0.27.2
-  resolution: "@backstage/plugin-auth-backend@npm:0.27.2"
+  version: 0.27.3
+  resolution: "@backstage/plugin-auth-backend@npm:0.27.3"
   dependencies:
     "@backstage/backend-plugin-api": "npm:^1.8.0"
     "@backstage/catalog-model": "npm:^1.7.7"
@@ -3365,7 +3365,7 @@ __metadata:
     uuid: "npm:^11.0.0"
     zod: "npm:^3.25.76 || ^4.0.0"
     zod-validation-error: "npm:^5.0.0"
-  checksum: 10c0/ab260061c42c29719c1e422594fc2cf54dee1c960f2ca9282895660e73f5c4a910756c5137056dbea979931e2a8a8e45cf3454e2eb2bd4ac914b9706b143ceab
+  checksum: 10c0/694cb1a2ae997f81d65f78c9c5d7ed0aa7b2752314dc27a925df7282bcf4a7141e187bff6eb6ecd2c99225e62e2a1c65650e3e19fa4fb62b7c9a1c71ff4bff18
   languageName: node
   linkType: hard
 

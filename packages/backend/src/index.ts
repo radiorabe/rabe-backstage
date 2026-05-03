@@ -18,6 +18,7 @@ backend.add(
 backend.add(import('@backstage/plugin-auth-backend'));
 backend.add(import('@backstage/plugin-auth-backend-module-oidc-provider'));
 backend.add(import('@backstage/plugin-auth-backend-module-github-provider'));
+backend.add(import('@backstage/plugin-auth-backend-module-guest-provider'));
 
 // catalog plugin
 backend.add(import('@backstage/plugin-catalog-backend'));
@@ -49,5 +50,8 @@ backend.add(import('@backstage-community/plugin-todo-backend'));
 
 // dev plugin
 backend.add(import('@backstage/plugin-devtools-backend'));
+
+// mcp actions plugin
+backend.add(import('@backstage/plugin-mcp-actions-backend'));
 
 backend.start();

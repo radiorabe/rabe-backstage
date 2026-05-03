@@ -41,8 +41,6 @@ export const SidebarContent = NavContentBlueprint.make({
           </SidebarGroup>
           <SidebarSpace />
           <SidebarDivider />
-          <NotificationsSidebarItem />
-          <SidebarDivider />
           <SidebarGroup
             label="Settings"
             icon={<UserSettingsSignInAvatar />}

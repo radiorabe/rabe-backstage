@@ -19,4 +19,22 @@ describe('getSignInProviders', () => {
 
     expect(providers).not.toContain('guest');
   });
+
+  it('includes guest provider when auth.environment is undefined', () => {
+    const providers = getSignInProviders(undefined);
+
+    expect(providers).toContain('guest');
+  });
+
+  it('always includes the OIDC provider as first entry', () => {
+    const providers = getSignInProviders('production');
+    const oidcProvider = providers[0];
+
+    expect(typeof oidcProvider).toBe('object');
+    expect(oidcProvider).toMatchObject({
+      id: 'oidc-auth-provider',
+      title: 'RaBe SSO',
+      message: 'Sign in with your RaBe Keycloak account',
+    });
+  });
 });

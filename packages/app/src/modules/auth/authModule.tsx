@@ -17,11 +17,8 @@ import { SignInPageBlueprint } from '@backstage/plugin-app-react';
 import { SignInPage } from '@backstage/core-components';
 import { OAuth2 } from '@backstage/core-app-api';
 import { oidcAuthApiRef } from './oidcAuthApiRef';
+import { getSignInProviders } from './signInProviders';
 import type { SignInPageProps } from '@backstage/core-plugin-api';
-
-type SignInProvider =
-  | 'guest'
-  | { id: string; title: string; message: string; apiRef: typeof oidcAuthApiRef };
 
 const oidcApiExtension = ApiBlueprint.make({
   name: 'oidc',
@@ -53,20 +50,9 @@ const rabeSignInPage = SignInPageBlueprint.make({
     loader: async () => {
       const RabeSignInPage = (props: SignInPageProps) => {
         const configApi = useApi(configApiRef);
-        // Show Guest only in non-production environments (dev, CI).
-        // auth.environment is set to 'development' in app-config.yaml and
-        // overridden to 'production' in app-config.production.yaml.
-        const isDev =
-          configApi.getOptionalString('auth.environment') !== 'production';
-        const providers: SignInProvider[] = [
-          {
-            id: 'oidc-auth-provider',
-            title: 'RaBe SSO',
-            message: 'Sign in with your RaBe Keycloak account',
-            apiRef: oidcAuthApiRef,
-          },
-          ...(isDev ? (['guest'] as const) : []),
-        ];
+        const providers = getSignInProviders(
+          configApi.getOptionalString('auth.environment'),
+        );
         return <SignInPage {...props} providers={providers} />;
       };
       return RabeSignInPage;

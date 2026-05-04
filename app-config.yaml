@@ -140,6 +140,11 @@ catalog:
           frequency: { minutes: 30 }
           timeout: { minutes: 3 }
 
+devTools:
+  scheduledTasks:
+    plugins:
+      - catalog
+
 # see https://backstage.io/docs/ai/mcp-actions for more details
 mcpActions:
   name: 'RaBe Backstage' # defaults to "backstage"

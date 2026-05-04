@@ -18,6 +18,7 @@ backend.add(
 backend.add(import('@backstage/plugin-auth-backend'));
 backend.add(import('@backstage/plugin-auth-backend-module-oidc-provider'));
 backend.add(import('@backstage/plugin-auth-backend-module-github-provider'));
+backend.add(import('@backstage/plugin-auth-backend-module-guest-provider'));
 
 // catalog plugin
 backend.add(import('@backstage/plugin-catalog-backend'));
@@ -29,7 +30,8 @@ backend.add(
   import('@backstage-community/plugin-catalog-backend-module-keycloak'),
 );
 backend.add(import('@backstage/plugin-catalog-backend-module-github'));
-backend.add(import('@internal/backstage-plugin-catalog-backend-module-foreman'))
+backend.add(import('@internal/backstage-plugin-catalog-backend-module-foreman'));
+backend.add(import('@backstage/plugin-catalog-backend-module-unprocessed'));
 backend.add(import('@internal/backstage-plugin-catalog-backend-module-transformer'))
 
 // permission plugin
@@ -50,5 +52,8 @@ backend.add(import('@backstage-community/plugin-todo-backend'));
 
 // dev plugin
 backend.add(import('@backstage/plugin-devtools-backend'));
+
+// mcp actions plugin
+backend.add(import('@backstage/plugin-mcp-actions-backend'));
 
 backend.start();

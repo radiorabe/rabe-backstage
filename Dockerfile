@@ -34,7 +34,7 @@ RUN yarn tsc
 RUN yarn build:backend
 
 # Stage 3 - Build the actual backend image and install production dependencies
-FROM ghcr.io/radiorabe/ubi9-minimal:0.11.4
+FROM ghcr.io/radiorabe/ubi9-minimal:0.11.5
 
 ENV APP_ROOT=/opt/app-root \
     # The $HOME is not set by default, but some applications need this variable
@@ -79,7 +79,6 @@ RUN    microdnf -y module disable nodejs \
          python3.11-pip \
          shadow-utils \
          tar \
-         yarnpkg \
     && ln /usr/bin/python3.11 /usr/bin/python \
     && ln /usr/bin/pydoc3.11 /usr/bin/pydoc \
     && ln /usr/bin/pip3.11 /usr/bin/pip \
@@ -106,12 +105,14 @@ WORKDIR "$HOME"
 USER 1001
 
 # Copy the install dependencies from the build stage and context
-COPY --from=build /opt/app-root/src/.yarn ./.yarn
+COPY --chown=1001:0 --from=build /opt/app-root/src/.yarn ./.yarn
 COPY --from=build /opt/app-root/src/backstage.json /opt/app-root/src/package.json /opt/app-root/src/yarn.lock /opt/app-root/src/.yarnrc.yml /opt/app-root/src/packages/backend/dist/skeleton.tar.gz ./
 RUN tar xzf skeleton.tar.gz && rm skeleton.tar.gz
 
 # Install production dependencies, ignoring scripts so we don't need a node-gyp toolchain to rebuild binary modules
-RUN YARN_ENABLE_SCRIPTS=false yarn workspaces focus --all --production && rm -rf "$(yarn cache clean)"
+RUN YARN=$(sed -n 's/^yarnPath: //p' .yarnrc.yml) \
+    && YARN_ENABLE_SCRIPTS=false node "$YARN" workspaces focus --all --production \
+    && node "$YARN" cache clean
 # Copy binary modules from build stage where we have proper toolchains
 COPY --from=build --chown=1001:0 /opt/app-root/src/node_modules/isolated-vm    ./node_modules/isolated-vm
 COPY --from=build --chown=1001:0 /opt/app-root/src/node_modules/ssh2           ./node_modules/ssh2

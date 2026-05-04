@@ -10,6 +10,19 @@ app:
           - url: https://github.com/radiorabe/rabe-backstage/issues
             title: GitHub Issues
 
+  # Enable all packages by default, this will discover packages from packages/app/package.json
+  packages: all
+  extensions:
+    # Configure the catalog index page to be the root page, this is normally mounted on /catalog
+    - page:catalog:
+        config:
+          path: /
+    # Disable the nav items that we're manually rendering in packages/app/src/modules/nav/Sidebar.tsx
+    - nav-item:search: false
+    - nav-item:user-settings: false
+    - nav-item:catalog: false
+    - nav-item:scaffolder: false
+
 organization:
   name: Radio Bern RaBe
 
@@ -38,6 +51,12 @@ backend:
   database:
     client: better-sqlite3
     connection: ":memory:"
+  # see https://backstage.io/docs/ai/mcp-actions#actions-configuration for more details
+  actions:
+    pluginSources:
+      - auth
+      - catalog
+      - scaffolder
   # workingDirectory: /tmp # Use this to configure a working directory for the scaffolder, defaults to the OS temp-dir
 
 proxy:
@@ -59,12 +78,20 @@ techdocs:
 
 auth:
   # see https://backstage.io/docs/auth/ to learn about auth providers
-  environment: production
+  environment: development
   ### Providing an auth.session.secret will enable session support in the auth-backend
   session:
     secret: ${SESSION_SECRET}
   providers:
     oidc:
+      development:
+        prompt: auto
+        metadataUrl: ${AUTH_KEYCLOAK_METADATA_URL}
+        clientId: ${AUTH_KEYCLOAK_CLIENT_ID}
+        clientSecret: ${AUTH_KEYCLOAK_CLIENT_SECRET}
+        signIn:
+          resolvers:
+            - resolver: emailMatchingUserEntityProfileEmail
       production:
         prompt: auto
         metadataUrl: ${AUTH_KEYCLOAK_METADATA_URL}
@@ -74,9 +101,24 @@ auth:
           resolvers:
             - resolver: emailMatchingUserEntityProfileEmail
     github:
+      development:
+        clientId: ${AUTH_GITHUB_CLIENT_ID}
+        clientSecret: ${AUTH_GITHUB_CLIENT_SECRET}
       production:
         clientId: ${AUTH_GITHUB_CLIENT_ID}
         clientSecret: ${AUTH_GITHUB_CLIENT_SECRET}
+  # see https://backstage.io/docs/ai/mcp-actions#client-id-metadata-documents
+  # to learn more about client id metadata documents
+  experimentalClientIdMetadataDocuments:
+    enabled: false
+    # Optional: restrict which `client_id` URLs are allowed (defaults to ['*'])
+    # allowedClientIdPatterns:
+    #   - 'https://example.com/*'
+    #   - 'https://*.trusted-domain.com/*'
+    # Optional: restrict which redirect URIs are allowed (defaults to ['*'])
+    # allowedRedirectUriPatterns:
+    #   - 'http://localhost:*'
+    #   - 'https://*.example.com/*'
 
 permission:
   enabled: true
@@ -97,3 +139,13 @@ catalog:
         schedule:
           frequency: { minutes: 30 }
           timeout: { minutes: 3 }
+
+devTools:
+  scheduledTasks:
+    plugins:
+      - catalog
+
+# see https://backstage.io/docs/ai/mcp-actions for more details
+mcpActions:
+  name: 'RaBe Backstage' # defaults to "backstage"
+  description: 'Tools for managing your software catalog, creating new services from templates, and exploring your developer portal' # optional

@@ -58,7 +58,7 @@
     "app": "link:../app",
     "better-sqlite3": "^12.9.0",
     "dockerode": "^5.0.0",
-    "express": "^4.22.1",
+    "express": "^4.22.2",
     "express-promise-router": "^4.1.1",
     "node-gyp": "^12.3.0",
     "pg": "^8.20.0"

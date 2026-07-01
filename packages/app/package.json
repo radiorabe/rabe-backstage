@@ -15,9 +15,9 @@
     "lint": "backstage-cli package lint"
   },
   "dependencies": {
-    "@backstage-community/plugin-github-actions": "^1.0.0",
-    "@backstage-community/plugin-github-pull-requests-board": "^1.0.0",
-    "@backstage-community/plugin-todo": "^0.20.0",
+    "@backstage-community/plugin-github-actions": "^1.1.0",
+    "@backstage-community/plugin-github-pull-requests-board": "^1.1.0",
+    "@backstage-community/plugin-todo": "^0.21.0",
     "@backstage/cli": "backstage:^",
     "@backstage/core-app-api": "backstage:^",
     "@backstage/core-components": "backstage:^",

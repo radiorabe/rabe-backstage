@@ -52,6 +52,7 @@
     "@backstage/plugin-search-backend-node": "backstage:^",
     "@backstage/plugin-signals-backend": "backstage:^",
     "@backstage/plugin-techdocs-backend": "backstage:^",
+    "@internal/backstage-plugin-catalog-backend-module-foreman": "workspace:^",
     "@internal/backstage-plugin-catalog-backend-module-transformer": "workspace:^",
     "@internal/backstage-plugin-permission-backend-module-rabe": "workspace:^",
     "@roadiehq/scaffolder-backend-module-http-request": "^5.6.0",

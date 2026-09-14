@@ -49,6 +49,15 @@ catalog:
   # on how to get entities into the catalog.
   locations: []
   providers:
+    foreman:
+      url: ${CATALOG_FOREMAN_URL}
+      accessId: ${CATALOG_FOREMAN_ACCESSID}
+      token: ${CATALOG_FOREMAN_TOKEN}
+      schedule:
+        # supports cron, ISO duration, "human duration" as used in code
+        frequency: { minutes: 30 }
+        # supports ISO duration, "human duration" as used in code
+        timeout: { minutes: 1 }
     keycloakOrg:
       production:
         baseUrl: ${CATALOG_KEYCLOAK_BASEURL}

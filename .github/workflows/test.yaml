@@ -5,12 +5,12 @@ on:
 
 jobs:
   pre-commit:
-    uses: radiorabe/actions/.github/workflows/test-pre-commit.yaml@b37e51397726092d8462a2a9b676ea5a5e3a8deb # v0.44.1
+    uses: radiorabe/actions/.github/workflows/test-pre-commit.yaml@953c51da7e4c2c681f15c70513cb803c8fa461cc # v0.44.3
   github-actions:
     permissions:
       contents: read
       security-events: write # so zizmor can publish results to the Security tab
-    uses: radiorabe/actions/.github/workflows/test-github-actions.yaml@b37e51397726092d8462a2a9b676ea5a5e3a8deb # v0.44.1
+    uses: radiorabe/actions/.github/workflows/test-github-actions.yaml@953c51da7e4c2c681f15c70513cb803c8fa461cc # v0.44.3
   test-yarn:
     runs-on: ubuntu-latest
     permissions:
@@ -29,11 +29,11 @@ jobs:
       matrix:
         node-version: [24]
     steps:
-    - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       with:
         fetch-depth: 0
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+      uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn'
@@ -63,11 +63,11 @@ jobs:
       statuses: none
       id-token: none
     steps:
-      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
       - name: Use Node.js
-        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: 24
           cache: 'yarn'

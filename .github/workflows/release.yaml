@@ -8,7 +8,7 @@ on:
 
 jobs:
   release-container:
-    uses: radiorabe/actions/.github/workflows/release-container.yaml@953c51da7e4c2c681f15c70513cb803c8fa461cc # v0.44.3
+    uses: radiorabe/actions/.github/workflows/release-container.yaml@6373540d4ab86c4ce044b6a67e96aecddf22c7c9 # v0.45.1
     with:
       image: 'ghcr.io/radiorabe/backstage'
       name: 'backstage'
@@ -16,4 +16,4 @@ jobs:
       tags: 'minimal rhel9 rabe backstage'
       cosign-base-image-only: true
   mkdocs:
-    uses: radiorabe/actions/.github/workflows/release-mkdocs.yaml@953c51da7e4c2c681f15c70513cb803c8fa461cc # v0.44.3
+    uses: radiorabe/actions/.github/workflows/release-mkdocs.yaml@6373540d4ab86c4ce044b6a67e96aecddf22c7c9 # v0.45.1

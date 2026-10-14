@@ -2427,30 +2427,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/backend-openapi-utils@npm:^0.6.7":
-  version: 0.6.7
-  resolution: "@backstage/backend-openapi-utils@npm:0.6.7"
-  dependencies:
-    "@apidevtools/swagger-parser": "npm:^10.1.0"
-    "@backstage/backend-plugin-api": "npm:^1.8.0"
-    "@backstage/errors": "npm:^1.2.7"
-    "@backstage/types": "npm:^1.2.2"
-    "@types/express": "npm:^4.17.6"
-    "@types/express-serve-static-core": "npm:^4.17.5"
-    ajv: "npm:^8.16.0"
-    express: "npm:^4.22.0"
-    express-openapi-validator: "npm:^5.5.8"
-    express-promise-router: "npm:^4.1.0"
-    get-port: "npm:^5.1.1"
-    json-schema-to-ts: "npm:^3.0.0"
-    lodash: "npm:^4.17.21"
-    mockttp: "npm:^3.13.0"
-    openapi-merge: "npm:^1.3.2"
-    openapi3-ts: "npm:^3.1.2"
-  checksum: 10c0/76def9609c614361ee46688df8b0823eab7e662999bc0891915a280d1d7559b75de5fed2de1832d51106f8d87e82f07ebc21a827fbaff6573f6cb7618eb110a6
-  languageName: node
-  linkType: hard
-
 "@backstage/backend-openapi-utils@npm:^0.6.8":
   version: 0.6.8
   resolution: "@backstage/backend-openapi-utils@npm:0.6.8"
@@ -4306,7 +4282,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/plugin-catalog-backend@backstage:^::backstage=1.50.4&npm=3.6.1, @backstage/plugin-catalog-backend@npm:^3.6.0, @backstage/plugin-catalog-backend@npm:^3.6.1":
+"@backstage/plugin-catalog-backend@backstage:^::backstage=1.50.4&npm=3.6.1, @backstage/plugin-catalog-backend@npm:^3.5.0, @backstage/plugin-catalog-backend@npm:^3.6.0, @backstage/plugin-catalog-backend@npm:^3.6.1":
   version: 3.6.1
   resolution: "@backstage/plugin-catalog-backend@npm:3.6.1"
   dependencies:
@@ -4346,47 +4322,6 @@ __metadata:
     zod: "npm:^3.25.76 || ^4.0.0"
     zod-validation-error: "npm:^4.0.2"
   checksum: 10c0/0ee96915aed380b7b086262cf3239a58b25a003bb1208ea089988c430743adfea3d116bd825f0e1600b0b879861033d0c76fe8703f496c0d88292110bc9f5f62
-  languageName: node
-  linkType: hard
-
-"@backstage/plugin-catalog-backend@npm:^3.5.0":
-  version: 3.5.0
-  resolution: "@backstage/plugin-catalog-backend@npm:3.5.0"
-  dependencies:
-    "@backstage/backend-openapi-utils": "npm:^0.6.7"
-    "@backstage/backend-plugin-api": "npm:^1.8.0"
-    "@backstage/catalog-client": "npm:^1.14.0"
-    "@backstage/catalog-model": "npm:^1.7.7"
-    "@backstage/config": "npm:^1.3.6"
-    "@backstage/errors": "npm:^1.2.7"
-    "@backstage/filter-predicates": "npm:^0.1.1"
-    "@backstage/integration": "npm:^2.0.0"
-    "@backstage/plugin-catalog-common": "npm:^1.1.8"
-    "@backstage/plugin-catalog-node": "npm:^2.1.0"
-    "@backstage/plugin-events-node": "npm:^0.4.20"
-    "@backstage/plugin-permission-common": "npm:^0.9.7"
-    "@backstage/plugin-permission-node": "npm:^0.10.11"
-    "@backstage/types": "npm:^1.2.2"
-    "@opentelemetry/api": "npm:^1.9.0"
-    codeowners-utils: "npm:^1.0.2"
-    core-js: "npm:^3.6.5"
-    express: "npm:^4.22.0"
-    fast-json-stable-stringify: "npm:^2.1.0"
-    fs-extra: "npm:^11.2.0"
-    git-url-parse: "npm:^15.0.0"
-    glob: "npm:^7.1.6"
-    knex: "npm:^3.0.0"
-    lodash: "npm:^4.17.21"
-    luxon: "npm:^3.0.0"
-    minimatch: "npm:^10.2.1"
-    p-limit: "npm:^3.0.2"
-    prom-client: "npm:^15.0.0"
-    uuid: "npm:^11.0.0"
-    yaml: "npm:^2.0.0"
-    yn: "npm:^4.0.0"
-    zod: "npm:^3.25.76 || ^4.0.0"
-    zod-validation-error: "npm:^4.0.2"
-  checksum: 10c0/661002ae3b2ac18c97355fe3414321805dff3be3a77f8c3f05cb9135b3008045ec296acedb307126e3ab2d778ce7c0461887c19a5ac69f5b09c4726a7354b434
   languageName: node
   linkType: hard
 
